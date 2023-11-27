@@ -38,3 +38,51 @@ function selected() {
 }
 
 $(".project-container").removeClass("project-container--fm");
+
+$(document).ready(function () {
+  i18next.init({
+    lng: 'en', // set the default language
+    resources: {
+      en: {
+        translation: {
+          // Load translations from the en.json file
+          // You can also load translations asynchronously if needed
+          // See i18next documentation for more options
+          home: 'Home',
+          education: 'Education',
+          // ...
+        },
+      },
+      es: {
+        translation: {
+          // Load translations from the es.json file
+          home: 'Inicio',
+          education: 'Educación',
+          // ...
+        },
+      },
+    },
+  });
+
+  // You can set the initial language here or provide a language switcher
+  // i18next.changeLanguage('en'); // set the initial language
+});
+
+function switchLanguage(lang) {
+  i18next.changeLanguage(lang);
+  // Aquí puedes actualizar el contenido de tu página después de cambiar el idioma
+  // Por ejemplo, puedes volver a renderizar la página o actualizar elementos específicos
+}
+
+// Ejemplo de un interruptor de idioma en tu HTML
+$('#englishButton').on('click', function () {
+  switchLanguage('en');
+});
+
+$('#spanishButton').on('click', function () {
+  switchLanguage('es');
+});
+
+// Puedes establecer el idioma inicial aquí si lo deseas
+// i18next.changeLanguage('en');
+;

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="icon" type="image/png" href="./images/marian-good.png">
+    <script src="https://cdn.jsdelivr.net/npm/i18next@21.7.1/dist/umd/i18next.min.js"></script>
     <title>Mi Portafolio</title>
   </head>
   <body>   
@@ -24,21 +25,24 @@
             </div>
             <ul class="undeploy"> 
                 <li >
-                    <a href="./" >Home</a>
+                    <a href="./" >{{ 'home' | t }}</a>
                 </li>
                 <li >
-                    <a href="#education" >Educación</a>
+                    <a href="#education" >{{ 'education' | t }}</a>
                 </li>
                 <li>
-                    <a href="#projects">Proyectos</a>
+                    <a href="#projects">{{ 'projects' | t }}</a>
                 </li>           
                 <li>
-                    <a href="#aboutMe">Acerca de mi</a>
+                    <a href="#aboutMe">{{ 'aboutMe' | t }}</a>
                 </li>           
                 <li>
-                    <a  href="#contactMe" >Contacto</a>
+                    <a  href="#contactMe" >{{ 'contactMe' | t }}</a>
                 </li>
             </ul>
+            <button id="englishButton">English</button>
+<button id="spanishButton">Español</button>
+
             <div >
                 <a class="work-request" href="./contactMe.html"> Trabaja conmigo! 
                     <i class="fas fa-share-square"></i>
@@ -52,13 +56,13 @@
                   <div class="container-line">
                       <div class="line"></div>
                   </div>
-                  <h5 class="highlight-info"> &#127891; Full Stack Developer </h5>
+                  <h5 class="highlight-info"> &#127891; {{ 'fullStackDeveloper' | t }} </h5>
               </div>
               <div class="flex-row">
                   <div class="container-line">
                       <div class="line"></div>
                   </div>
-                  <h5 class="highlight-info highlight-info__middle">&#127969; Residencia en Argentina</h5>
+                  <h5 class="highlight-info highlight-info__middle">&#127969; {{ 'residence' | t }}</h5>
               </div>
           </div>
           <div class="profile-information">
@@ -150,25 +154,25 @@
                                       <span>Redux</span>
                                   </div>
                                   <div>
-                                      <img class="languagesIcon" src="./images/github.png" alt="github" >
-                                      <span>Github</span>
+                                      <img class="languagesIcon" src="./images/typescript.png" alt="typescript" >
+                                      <span>Typescript</span>
                                   </div>
                                   <div>
                                       <img class="languagesIcon" src="./images/sequelize.png" alt="sequelize" >
                                       <span>Sequelize</span>
-                                  </div>
-                                  <div>
-                                      <img class="languagesIcon" src="./images/postgre.png" alt="postgres" > 
-                                      <span>PostgreSQL</span>
-                                  </div>
-                                  <div>
-                                      <img class="languagesIcon" src="./images/nodejs.png" alt="nodejs" >
-                                      <span>NodeJS</span>
-                                  </div>
-                                  <div>
-                                      <img class="languagesIcon" src="./images/typescript.png" alt="typescript" >
-                                      <span>Typescript</span>
-                                  </div>
+                                    </div>
+                                    <div>
+                                        <img class="languagesIcon" src="./images/postgre.png" alt="postgres" > 
+                                        <span>PostgreSQL</span>
+                                    </div>
+                                    <div>
+                                        <img class="languagesIcon" src="./images/nodejs.png" alt="nodejs" >
+                                        <span>NodeJS</span>
+                                    </div>
+                                    <div>
+                                        <img class="languagesIcon" src="./images/github.png" alt="github" >
+                                        <span>Github</span>
+                                    </div>
                               </div>
                           </div>
                       </div>

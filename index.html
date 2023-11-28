@@ -1,15 +1,14 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/31bc8b6bf0.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <link rel="icon" type="image/png" href="./images/marian-good.png">
-    <script src="https://cdn.jsdelivr.net/npm/i18next@21.7.1/dist/umd/i18next.min.js"></script>
-    <title>Mi Portafolio</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/31bc8b6bf0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+        <link rel="icon" type="image/png" href="./images/marian-good.png">        
+        <title>Mi Portafolio</title>
+      </head>
   <body>   
     <header>
         <nav class="container-nav">
@@ -24,26 +23,12 @@
                 </button>
             </div>
             <ul class="undeploy"> 
-                <li >
-                    <a href="./" >{{ 'home' | t }}</a>
-                </li>
-                <li >
-                    <a href="#education" >{{ 'navBar.education' | t }}</a>
-                </li>
-                <li>
-                    <a href="#projects">{{ 'navBar.projects' | t }}</a>
-                </li>           
-                <li>
-                    <a href="#aboutMe">{{ 'aboutMe' | t }}</a>
-                </li>           
-                <li>
-                    <a  href="#contactMe" >{{ 'contactMe' | t }}</a>
-                </li>
+                <li><a href="./">Inicio</a></li>
+                <li><a href="#education">Educacion</a></li>
+                <li><a href="#projects">Projectos</a></li>           
+                <li><a href="#aboutMe">Acerca de mi</a></li>           
+                <li><a href="#contactMe">Contacto</a></li>
             </ul>
-            <button id="englishButton">English</button>
-            <button id="spanishButton">Español</button>
-            <button id="portuguêsButton">Português</button>
-
             <div >
                 <a class="work-request" href="./contactMe.html"> Trabaja conmigo! 
                     <i class="fas fa-share-square"></i>
@@ -57,13 +42,13 @@
                   <div class="container-line">
                       <div class="line"></div>
                   </div>
-                  <h5 class="highlight-info"> &#127891; {{ 'fullStackDeveloper' | t }} </h5>
+                  <h5 class="highlight-info"> &#127891; FullStack Developer</h5>
               </div>
               <div class="flex-row">
                   <div class="container-line">
                       <div class="line"></div>
                   </div>
-                  <h5 class="highlight-info highlight-info__middle">&#127969; {{ 'residence' | t }}</h5>
+                  <h5 class="highlight-info highlight-info__middle">&#127969; Residence</h5>
               </div>
           </div>
           <div class="profile-information">
@@ -340,6 +325,6 @@
           </section>
       </main>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

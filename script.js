@@ -1,3 +1,5 @@
+const { default: i18next } = require("i18next");
+
 $("#btn-hamburger").click(function () {
   // $('.undeploy').classList.toggle("deploy")
   $(".undeploy").toggleClass("deploy");
@@ -39,33 +41,28 @@ function selected() {
 
 $(".project-container").removeClass("project-container--fm");
 
-$(document).ready(function () {
-  i18next.init({
-    lng: 'en', // set the default language
-    resources: {
-      en: {
-        translation: {
-          // Load translations from the en.json file
-          // You can also load translations asynchronously if needed
-          // See i18next documentation for more options
-          home: 'Home',
-          education: 'Education',
-          // ...
-        },
-      },
-      es: {
-        translation: {
-          // Load translations from the es.json file
-          home: 'Inicio',
-          education: 'Educación',
-          // ...
-        },
-      },
-    },
-  });
+import { I18nextProvider } from "react-i18next";
+import i18next from "i18next";
+import global_es from "./Translations/Es/global.json"
+import global_en from "./Translations/En/global.json"
+import global_zh from "./Translations/Zh/global.json"
+import global_pt from './Translations/Pt/global.json'
 
-  // You can set the initial language here or provide a language switcher
-  // i18next.changeLanguage('en'); // set the initial language
+i18next
+.init({
+  interpolation: { escapeValue: false },
+  lng: "es",
+  resources: {
+    es: {
+      global: global_es,
+    },
+    en: {
+      global: global_en,
+    },
+    pt: {
+      global: global_pt,
+    },
+  },
 });
 
 function switchLanguage(lang) {

@@ -1,4 +1,4 @@
-{
+{ "navBar":{
     "home": "Home",
     "education": "Education",
     "projects": "Projects",
@@ -6,5 +6,6 @@
     "contactMe": "Contact Me",
     "fullStackDeveloper": "Full Stack Developer",
     "residence": "Residence in Argentina"
+}
   }
   

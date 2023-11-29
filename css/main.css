@@ -466,14 +466,15 @@
 }
 
 #aboutMe {
-  height: 100vh;
-  width: 100%;
+  height: auto;
+  /* width: 100%; */
   background-image: url(/images/aboutMe.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: white;
   border-top: 0.1px solid black;
+  background-color: #03121d;
 }
 #aboutMe h2 {
   color: #03121d;
@@ -486,6 +487,7 @@
 }
 
 .aboutMe-body h3 {
+  font-size: 4vw;
   text-align: center;
 }
 
@@ -512,7 +514,7 @@
   background-size: 0% 100%;
   background-position-x: right;
   transition: background-size 500ms;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .aboutMe-body h3:hover {
   background-size: 100% 100%;
@@ -521,7 +523,7 @@
 .aboutMe-body p {
   width: 90%;
   text-align: center;
-  font-size: 4vw;
+  font-size: 2vw;
   line-height: 3vh;
 }
 

@@ -6,7 +6,12 @@
         <script src="https://kit.fontawesome.com/31bc8b6bf0.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-        <link rel="icon" type="image/png" href="./images/marian-good.png">        
+        <link rel="icon" type="image/png" href="./images/marian-good.png"> 
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>       
         <title>Mi Portafolio</title>
       </head>
   <body>   
@@ -14,7 +19,7 @@
         <nav class="container-nav">
             <div class="nav">
                 <div class="home">
-                    <a href="./"> Mariano Masondo
+                    <a href="#home"> Mariano Masondo
                         <i class="fas fa-smile-wink"></i>
                     </a>
                 </div>
@@ -23,7 +28,7 @@
                 </button>
             </div>
             <ul class="undeploy"> 
-                <li><a href="./">Inicio</a></li>
+                <li><a href="#home">Inicio</a></li>
                 <li><a href="#education">Educacion</a></li>
                 <li><a href="#projects">Proyectos</a></li>           
                 <li><a href="#aboutMe">Acerca de mi</a></li>           
@@ -36,6 +41,7 @@
               </div>
             </nav>
         </header>
+        
         <section class="profile">
           <div class="profile-highlights">
               <div class="flex-row">
@@ -67,7 +73,9 @@
                   <div class="container-line__conect"></div>
           </div>
       </section>
-      <main class="summary">
+      <main class="summary">     
+        <section id="home"></section>  
+        
           <section id="education">
               <div class="educationContainer">
                   <div>
@@ -200,10 +208,6 @@
                       <div class="container-img"> 
                               <img  class="img-proj img-proj--left" src="./images/Rick&MortyApp.png" alt="image of first project">
                               <div class="linked-project">
-                                  <!-- <div>
-                                      <a href="https://poke-app1.vercel.app/" target="_blank" ><i class="fa-brands fa-chrome"></i></a>
-                                      <span>Website</span>
-                                  </div> -->
                                   <div>
                                       <a href="https://github.com/MarianoMasondo/rick_and_morty_marian" target="_blank" ><img class="linked" src="./images/github.png" alt="github" ></a>
                                       <span>Github</span>
@@ -215,10 +219,6 @@
                       <div class="container-img"> 
                               <img  class="img-proj img-proj--left" src="./images/DriversApp.png" alt="image of second project">
                               <div class="linked-project">
-                                  <!-- <div>
-                                      <a href="https://salva-mi-huella.vercel.app/" target="_blank" ><i class="fa-brands fa-chrome"></i></a>
-                                      <span>Website</span>
-                                  </div> -->
                                   <div>
                                       <a href="https://github.com/MarianoMasondo/cr-pi-drivers-Marian" target="_blank" ><img class="linked" src="./images/github.png" alt="github" ></a>
                                       <span>Github</span>
@@ -325,6 +325,31 @@
           </section>
       </main>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+       $(document).ready(function () {
+    $('a[href^="#"]').on('click', function (event) {
+        event.preventDefault();
+        var target = this.hash;
+        var $target = $(target);
+
+        // Desplazamiento suave
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 50, 'swing');
+    });
+
+    $('a[href="#home"]').on('click', function (event) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            'scrollTop': 0
+        }, 50, 'swing');
+    });
+});
+
+
+
+
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

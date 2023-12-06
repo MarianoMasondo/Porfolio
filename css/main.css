@@ -411,12 +411,14 @@
   background-color: #03121d;
   color: white;
 }
+
 #projects > div h5 {
   padding-top: 30px;
   margin-top: 60px;
   text-align: center;
   font-size: 1.2rem;
 }
+
 #projects .project-header {
   text-align: center;
   padding: 8px;
@@ -427,47 +429,49 @@
 
 .project-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content:space-around; 
   align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-bottom: 75px;
-  padding-top: 15px;
+  flex-direction: column; 
+  width: 80%; 
+  margin: 0 auto; 
+  padding: 15px;
+  margin-bottom: 15px;
   margin-top: 15px;
 }
-.project-container .project-text {
-  width: 80%;
+
+.container-img {
+  width: 80%; 
   text-align: center;
 }
-.project-container .project-text h4 {
-  color: beige;
-}
-.project-container .project-text h2 {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-.project-container .project-text p {
-  width: 100%;
-  padding-bottom: 30px;
-}
-.project-container .container-img {
-  width: 90%;
-}
-.project-container .container-img > div {
+
+.container-img > div {
   display: none;
-}
-.project-container .img-proj {
-  width: 100%;
 }
 
 .img-proj {
+  width: 100%;
   border-radius: 30px;
   box-shadow: rgba(95, 144, 192, 0.74) 0px 20px 30px -10px;
 }
 
+.project-container .project-text,
+.project-container .container-img {
+  width: 100%;
+  text-align: center;
+}
+
+.project-container .project-text {
+  margin-top: 15px;
+}
+
+.project-container .linked-project {
+  margin-top: 15px;
+  text-align: center;
+}
+
 #aboutMe {
   height: auto;
-  /* width: 100%; */
+  width: 100%;
   background-image: url(/images/aboutMe.jpeg);
   background-repeat: no-repeat;
   background-position: center;
@@ -500,8 +504,6 @@
 .aboutMe-body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
   height: 100%;
 }
 .aboutMe-body h3 {
@@ -529,7 +531,12 @@
 }
 
 .aboutMe-pic {
-  display: none;
+  display: flex;
+  max-width: 70%;
+  max-height: 70%;
+  margin-top: 12%;
+  margin-left: 15%;
+ 
 }
 
 #contactMe {

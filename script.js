@@ -32,9 +32,3 @@ function selected() {
 }
 
 $(".project-container").removeClass("project-container--fm");
-
-
-
-
-
-

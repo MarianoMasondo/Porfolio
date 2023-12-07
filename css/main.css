@@ -917,7 +917,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1040px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .header-title {
     font-size: 40px;
   }
@@ -1045,7 +1045,8 @@
 
 @media (max-width: 768px) {
   .container-box {
-    width: 90%;
+    width: auto;
+    height: auto;
   }
   .contact-mail {
     font-size: 1.3rem;

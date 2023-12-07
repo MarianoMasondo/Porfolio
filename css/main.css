@@ -53,6 +53,7 @@
 #btn-hamburger {
   margin-left: 30px;
   margin-top: 3px;
+  color: wheat;
   background-color: transparent;
   border: none;
   transition: 0.25s;
@@ -351,7 +352,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 120vh;
+  height: 100vh;
   min-height: 800px;
   z-index: -10;
   background-image: linear-gradient(
@@ -472,16 +473,14 @@
 #aboutMe {
   height: auto;
   width: 100%;
-  background-image: url(/images/aboutMe.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  text-align: center;
   color: white;
   border-top: 0.1px solid black;
   background-color: #03121d;
 }
 #aboutMe h2 {
   color: #03121d;
+  padding-top: 30px;
   margin-top: 60px;
   text-align: center;
   padding: 8px;
@@ -499,6 +498,8 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  text-align: center;
+  
 }
 
 .aboutMe-body {
@@ -508,7 +509,7 @@
 }
 .aboutMe-body h3 {
   font-family: "Rhodium Libre", serif;
-  width: 70%;
+  width: 100%;
   font-size: 6vw;
   background-image: linear-gradient(90deg, #20bcff5c, #38383836);
   background-repeat: no-repeat;
@@ -516,32 +517,32 @@
   background-size: 0% 100%;
   background-position-x: right;
   transition: background-size 500ms;
-  margin-top: 20px;
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 .aboutMe-body h3:hover {
   background-size: 100% 100%;
   background-position-x: left;
 }
 .aboutMe-body p {
-  width: 90%;
+  width: 100%;
   text-align: center;
-  font-size: 2vw;
+  font-size: 3vw;
   line-height: 4vh;
   margin-bottom: 3vh;
 }
 
-.aboutMe-pic {
-  display: flex;
-  max-width: 70%;
-  max-height: 70%;
-  margin-top: 12%;
-  margin-left: 15%;
+.aboutMe-pic img {
+  width: 80%;
+  height: 70%;
+  border-radius: 10px; 
+  margin-left: 10%;
 }
 
 #contactMe {
   display: grid;
   grid-template-rows: 85% auto;
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   background-image: linear-gradient(
     360deg,
@@ -862,15 +863,10 @@
     grid-template-rows: 90vh;
   }
   .aboutMe-pic {
-    display: block;
+    display: flex;
     border-radius: 10px;
-    margin-right: 20px;
+    align-items: center;
     grid-area: amImg;
-    background-image: url(../images/aboutMe.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -moz-box-shadow: inset 10px 10px 50px #fff;
     -webkit-box-shadow: inset 10px 10px 50px #fff;
     box-shadow: inset 80px 1px 50px #03121d, inset -80px -1px 50px #03121d;
   }
@@ -916,6 +912,7 @@
     font-size: 6vw;
   }
 }
+
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .header-title {
@@ -1057,5 +1054,19 @@
   }
   .footer-nav--contact ul {
     flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-aboutMe {
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutMe-pic {
+    max-width: 100%;
+    margin-top: 3%;
+  }
+  .aboutMe-body {
+    width: 80%;
   }
 }

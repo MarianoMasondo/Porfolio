@@ -1,351 +1,555 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="https://kit.fontawesome.com/31bc8b6bf0.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./css/main.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-        <link rel="icon" type="image/jpeg" href="./images/favicon-Marian.png"> 
-        <style>
-            html {
-                scroll-behavior: smooth;
-            }
-        </style>       
-        <title>Mi Portafolio</title>
-      </head>
-  <body>   
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/31bc8b6bf0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <link rel="icon" type="image/jpeg" href="./images/favicon-Marian.png" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <title>Mi Portafolio</title>
+  </head>
+  <body>
     <header>
-        <nav class="container-nav">
-            <div class="nav">
-                <div class="home">
-                    <a href="#home"> Mariano Masondo
-                        <i class="fas fa-smile-wink"></i>
-                    </a>
-                </div>
-                <button id="btn-hamburger" >
-                    <i class="bi bi-list"></i>
-                </button>
+      <nav class="container-nav">
+        <div class="nav">
+          <div class="home">
+            <a href="#home">
+              Mariano Masondo
+              <i class="fas fa-smile-wink"></i>
+            </a>
+          </div>
+          <button id="btn-hamburger">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+        <ul class="undeploy">
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#education">Educacion</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#aboutMe">Acerca de mi</a></li>
+          <li><a href="#contactMe">Contacto</a></li>
+        </ul>
+        <div>
+          <a class="work-request" href="./contactMe.html">
+            Trabaja conmigo!
+            <i class="fas fa-share-square"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="profile">
+      <div class="profile-highlights">
+        <div class="flex-row">
+          <div class="container-line">
+            <div class="line"></div>
+          </div>
+          <h5 class="highlight-info">&#127891; FullStack Developer</h5>
+        </div>
+        <div class="flex-row">
+          <div class="container-line">
+            <div class="line"></div>
+          </div>
+          <h5 class="highlight-info highlight-info__middle">
+            &#127969; Lugar de residencia: Argentina
+          </h5>
+        </div>
+      </div>
+      <div class="profile-information">
+        <div>
+          <img
+            id="profImg"
+            src=".//images//marian-hello.jpeg"
+            alt="profile-img"
+          />
+        </div>
+        <div class="container-header">
+          <h1 class="header-title">
+            Hola gente! <br />
+            <span>
+              Soy
+              <span class="highlight">Marian</span>
+            </span>
+          </h1>
+          <p class="header-intro">
+            Soy un entusiasta de la tecnología con una firme dedicación a
+            aprender y evolucionar continuamente en el campo del desarrollo de
+            software. Mi objetivo profesional actual es catalizar la innovación
+            tecnológica mediante soluciones creativas y eficientes,
+            contribuyendo así al progreso y la excelencia en este emocionante
+            ámbito.
+          </p>
+        </div>
+      </div>
+    </section>
+    <main class="summary">
+      <section id="home"></section>
+      <section id="education">
+        <div class="educationContainer">
+          <div>
+            <h2>Mi camino educativo</h2>
+            <div class="containerPath">
+              <div>
+                <p class="education-years">2023-2023</p>
+                <p>Full-Stack Developer Bootcamp</p>
+              </div>
+              <p class="institution">HENRY</p>
             </div>
-            <ul class="undeploy"> 
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#education">Educacion</a></li>
-                <li><a href="#projects">Proyectos</a></li>           
-                <li><a href="#aboutMe">Acerca de mi</a></li>           
-                <li><a href="#contactMe">Contacto</a></li>
-            </ul>
-            <div >
-                <a class="work-request" href="./contactMe.html"> Trabaja conmigo! 
-                    <i class="fas fa-share-square"></i>
-                </a>
-              </div>
-            </nav>
-        </header>
-        
-        <section class="profile">
-          <div class="profile-highlights">
-              <div class="flex-row">
-                  <div class="container-line">
-                      <div class="line"></div>
-                  </div>
-                  <h5 class="highlight-info"> &#127891; FullStack Developer</h5>
-              </div>
-              <div class="flex-row">
-                  <div class="container-line">
-                      <div class="line"></div>
-                  </div>
-                  <h5 class="highlight-info highlight-info__middle">&#127969; Lugar de residencia: Argentina</h5>
-              </div>
           </div>
-          <div class="profile-information">
-              <div>
-                  <img id="profImg" src=".//images//marian-hello.jpeg" alt="profile-img">
+          <div class="wrapperSkillsLanguages">
+            <h2 class="skillsTitle">Skills</h2>
+            <div class="containerSkills">
+              <div class="softSkills">
+                <h3 class="skills-subtitles">Soft Skills</h3>
+                <div class="softSkills-items">
+                  <ul>
+                    <li>Creativo</li>
+                    <li>Curioso</li>
+                    <li>SCRUM</li>
+                  </ul>
+                  <ul>
+                    <li>Adaptable</li>
+                    <li>Trabajo en equipo</li>
+                    <li>AGILE</li>
+                  </ul>
+                </div>
+                <div class="countriesFlags">
+                  <div>
+                    <img
+                      class="flags"
+                      src="./images/spainFlag.png"
+                      alt="Spanish"
+                    />
+                    <span>Español <br />(Nativo)</span>
+                  </div>
+                  <div>
+                    <img
+                      class="flags"
+                      src="./images/ukFlag.png"
+                      alt="English"
+                    />
+                    <span>Inglés <br />(Avanzado)</span>
+                  </div>
+                  <div>
+                    <img
+                      class="flags"
+                      src="./images/brazilFlag.png"
+                      alt="Português"
+                    />
+                    <span>Portugués <br />(Avanzado)</span>
+                  </div>
+                </div>
               </div>
-              <div class="container-header">   
-                  <h1 class="header-title">Hola gente! <br>
-                      <span> Soy
-                          <span class="highlight">Marian</span>
-                      </span></h1>     
-                      <p class="header-intro">Soy un entusiasta de la tecnología con una firme dedicación a aprender y evolucionar continuamente en el campo del desarrollo de software. Mi objetivo profesional actual es catalizar la innovación tecnológica mediante soluciones creativas y eficientes, contribuyendo así al progreso y la excelencia en este emocionante ámbito.</p>
+              <div class="languages">
+                <div>
+                  <h3 class="skills-subtitles">Programming Skills</h3>
+                </div>
+                <div class="languagesIcon-container">
+                  <div>
+                    <img
+                      class="languagesIcon"
+                      src="./images/html.png"
+                      alt="html"
+                    />
+                    <span>HTML</span>
+                  </div>
+                  <div>
+                    <img
+                      class="languagesIcon"
+                      src="./images/css-3.png"
+                      alt="css"
+                    />
+                    <span>CSS</span>
+                  </div>
+                  <div>
+                    <img
+                      class="languagesIcon"
+                      src="./images/js.png"
+                      alt="javascript"
+                    />
+                    <span>JavaScript</span>
+                  </div>
+                  <div>
+                    <img
+                      class="languagesIcon"
+                      src="./images/physics.png"
+                      alt="react js"
+                    />
+                    <span>REACT</span>
+                  </div>
+                  <div>
+                    <img
+                      class="languagesIcon"
+                      src="./images/redux.png"
+                      alt="redux"
+                    />
+                    <span>Redux</span>
+                  </div>
+                  <div>
+                    <img
+                      class="languagesIcon"
+                      src="./images/typescript.png"
+                      alt="typescript"
+                    />
+                    <span>Typescript</span>
+                  </div>
+                  <div>
+                    <img
+                      class="languagesIcon"
+                      src="./images/sequelize.png"
+                      alt="sequelize"
+                    />
+                    <span>Sequelize</span>
+                  </div>
+                  <div>
+                    <img
+                      class="languagesIcon"
+                      src="./images/postgre.png"
+                      alt="postgres"
+                    />
+                    <span>PostgreSQL</span>
+                  </div>
+                  <div>
+                    <img
+                      class="languagesIcon"
+                      src="./images/nodejs.png"
+                      alt="nodejs"
+                    />
+                    <span>NodeJS</span>
+                  </div>
+                  <div>
+                    <img
+                      class="languagesIcon"
+                      src="./images/github.png"
+                      alt="github"
+                    />
+                    <span>Github</span>
+                  </div>
+                </div>
               </div>
+            </div>
           </div>
+        </div>
+        <div class="curriculumContainer">
+          <i class="fas fa-cloud-download"></i>
+          <a
+            id="cvLink"
+            class="cv"
+            href="./file/CVMarianoMasondo.pdf"
+            target="_blank"
+            >Curriculum Vitae</a
+          >
+        </div>
       </section>
-      <main class="summary">     
-        <section id="home"></section>          
-          <section id="education">
-              <div class="educationContainer">
-                  <div>
-                      <h2>Mi camino educativo</h2>
-                      <div class="containerPath">
-                          <div>
-                              <p class="education-years">2023-2023</p>
-                              <p>Full-Stack Developer Bootcamp</p>
-                          </div>
-                          <p class="institution">HENRY</p>
-                      </div>               
-                         
-                  </div>
-                  <div class="wrapperSkillsLanguages">
-                      <h2 class="skillsTitle">Skills</h2>
-                      <div class="containerSkills">
-                          <div class="softSkills">
-                              <h3 class="skills-subtitles">Soft Skills</h3>
-                              <div class="softSkills-items">
-                                  <ul>
-                                      <li>Creativo</li>
-                                      <li>Curioso</li>
-                                      <li>SCRUM</li>
-                                  </ul>
-                                  <ul>
-                                      <li>Adaptable</li>
-                                      <li>Trabajo en equipo</li>
-                                      <li>AGILE</li>
-                                  </ul>
-                              </div>
-                              <div class="countriesFlags">
-                                  <div>
-                                      <img class="flags" src="./images/spainFlag.png" alt="Spanish" >
-                                      <span>Español <br>(Nativo)</span>
-                                  </div>
-                                  <div>
-                                      <img class="flags" src="./images/ukFlag.png" alt="English" >
-                                      <span>Inglés <br>(Avanzado)</span>
-                                  </div>
-                                  <div>
-                                      <img class="flags" src="./images/brazilFlag.png" alt="Português" >
-                                      <span>Portugués <br>(Avanzado)</span>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="languages">
-                              <div>
-                                  <h3 class="skills-subtitles">Programming Skills</h3>            
-                              </div>
-                              <div class="languagesIcon-container">
-                                  <div>
-                                      <img class="languagesIcon" src="./images/html.png" alt="html" >
-                                      <span>HTML</span>
-                                  </div>
-                                  <div>
-                                      <img class="languagesIcon" src="./images/css-3.png" alt="css" >
-                                      <span>CSS</span>
-                                  </div>
-                                  <div>
-                                      <img class="languagesIcon" src="./images/js.png" alt="javascript" >
-                                      <span>JavaScript</span>
-                                  </div>
-                                  <div>
-                                      <img class="languagesIcon" src="./images/physics.png" alt="react js" >
-                                      <span>REACT</span>
-                                  </div>
-                                  <div>
-                                      <img class="languagesIcon" src="./images/redux.png" alt="redux" >
-                                      <span>Redux</span>
-                                  </div>
-                                  <div>
-                                      <img class="languagesIcon" src="./images/typescript.png" alt="typescript" >
-                                      <span>Typescript</span>
-                                  </div>
-                                  <div>
-                                      <img class="languagesIcon" src="./images/sequelize.png" alt="sequelize" >
-                                      <span>Sequelize</span>
-                                    </div>
-                                    <div>
-                                        <img class="languagesIcon" src="./images/postgre.png" alt="postgres" > 
-                                        <span>PostgreSQL</span>
-                                    </div>
-                                    <div>
-                                        <img class="languagesIcon" src="./images/nodejs.png" alt="nodejs" >
-                                        <span>NodeJS</span>
-                                    </div>
-                                    <div>
-                                        <img class="languagesIcon" src="./images/github.png" alt="github" >
-                                        <span>Github</span>
-                                    </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>  
-              </div>
-              <div class="curriculumContainer">
-                  <i class="fas fa-cloud-download"></i>
-                  <a id="cvLink" class="cv" href="./file/CVMarianoMasondo.pdf" target="_blank">Curriculum Vitae</a>
-              </div>
-          </section>
-          <section class="service-pic">
-              <h3>“Está bien 
-                  <span> celebrar el éxito, </span></h3>
-                  <h3>pero es más importante prestar atención
-                      <span> a las lecciones del fracaso”</span></h3> 
-                      <h6><i>-Bill Gates</i></h6>
-                      <img src="./images/marian-computer.png"  id="avatarComputer" alt="image avatar with computer">
-          </section>
-          <section id="projects">
+      <section class="service-pic">
+        <h3>“Está bien <span> celebrar el éxito, </span></h3>
+        <h3>
+          pero es más importante prestar atención
+          <span> a las lecciones del fracaso”</span>
+        </h3>
+        <h6><i>-Bill Gates</i></h6>
+        <img
+          src="./images/marian-computer.png"
+          id="avatarComputer"
+          alt="image avatar with computer"
+        />
+      </section>
+      <section id="projects">
+        <div>
+          <h5></h5>
+          <h2 class="project-header">Algunos de mis proyectos.</h2>
+        </div>
+        <div class="flex-spaceAround">
+          <div class="project-container">
+            <div class="project-text">
+              <h4>-Proyecto 1-</h4>
+              <h2>Rick & Morty App</h2>
+              <p>
+                Es es una app en dónde tuve mi primer contacto con lo que era
+                programar. En esta app se puede renderizar los personajes de
+                Rick & Morty (cerca de 800!) desde una Api pública y se los
+                puede filtrar, ordenar, agregar a favoritos. Fue un desafío
+                comenzar trabajar con un Server y un Cliente y afianzar lo que
+                había aprendidos de estados de Redux!
+              </p>
               <div>
-                  <h5></h5>
-                  <h2 class="project-header">Algunos de mis proyectos.</h2>
+                <img
+                  class="iconBW"
+                  src="./images/htmlBW.png"
+                  alt=""
+                  srcset=""
+                />
+                <img class="iconBW" src="./images/jsBW.png" alt="" srcset="" />
+                <img
+                  class="iconBW"
+                  src="./images/reactBW.png"
+                  alt=""
+                  srcset=""
+                />
+                <img
+                  class="iconBW"
+                  src="./images/postgreBW.png"
+                  alt=""
+                  srcset=""
+                />
+                <img class="iconBW" src="./images.png" alt="" srcset="" />
               </div>
-              <div class="flex-spaceAround">
-                  <div class="project-container">
-                      <div class="project-text">
-                          <h4>-Proyecto 1-</h4>
-                          <h2>Rick & Morty App</h2>
-                          <p>Es es una app en dónde tuve mi primer contacto con lo que era programar. En esta app se puede renderizar los personajes de Rick & Morty (cerca de 800!) desde una Api pública y se los puede filtrar, ordenar, agregar a favoritos. Fue un desafío comenzar trabajar con un Server y un Cliente y afianzar lo que había aprendidos de estados de Redux!
-                          </p>
-                          <div>
-                              <img class="iconBW" src="./images/htmlBW.png" alt="" srcset="">
-                              <img class="iconBW" src="./images/jsBW.png" alt="" srcset="">
-                              <img class="iconBW" src="./images/reactBW.png" alt="" srcset="">
-                              <img class="iconBW" src="./images/postgreBW.png" alt="" srcset="">
-                              <img class="iconBW" src="./images.png" alt="" srcset="">
-                          </div>
-                      </div>
-                      <div class="container-img"> 
-                              <img  class="img-proj img-proj--left" src="./images/Rick&MortyApp.png" alt="image of first project">
-                              <div class="linked-project">
-                                  <div>
-                                      <a href="https://github.com/MarianoMasondo/rick_and_morty_marian" target="_blank" ><img class="linked" src="./images/github.png" alt="github" ></a>
-                                      <span>Github</span>
-                                  </div>
-                              </div>
-                      </div>
-                  </div>
-                  <div class="project-container">
-                      <div class="container-img"> 
-                              <img  class="img-proj img-proj--left" src="./images/DriversApp.png" alt="image of second project">
-                              <div class="linked-project">
-                                  <div>
-                                      <a href="https://github.com/MarianoMasondo/cr-pi-drivers-Marian" target="_blank" ><img class="linked" src="./images/github.png" alt="github" ></a>
-                                      <span>Github</span>
-                                  </div>
-                              </div>
-                      </div>
-                      <div class="project-text">
-                          <h4>-Proyecto 2-</h4>
-                          <h2>Drivers app</h2>
-                          <p>  
-                              Esta fue mi primera aplicacción full-stack completa que pude realizar solo. En esta app renderizo conductores de carrera desde una api pública en la que se le pueden aplicar diferentes filtros, ordenes, etc, para poder buscar un conductor específico o varios, de una misma escudería, entre otras cosas. Si inicias seción puedes crear un conductor  nuevo tú mismo!                              
-                          </p>
-                          <div>
-                              <img class="iconBW" src="./images/htmlBW.png" alt="" srcset="">
-                              <img class="iconBW" src="./images/jsBW.png" alt="" srcset="">
-                              <img class="iconBW" src="./images/reactBW.png" alt="" srcset="">
-                              <img class="iconBW" src="./images/postgreBW.png" alt="" srcset="">
-                              <img class="iconBW" src="./images.png" alt="" srcset="">
-  
-                              
-                          </div>
-                      </div>
-                  </div>
-                  <div class="project-container">
-                      <div class="project-text">
-                          <h4>-Proyecto 3-</h4>
-                          <h2>E-commerce Las Encinas Boutique</h2>
-                          <p>  Esta es mi primera experiencia trabajando con la metodología SCRUM. Es un proyecto de una chocolatería artesanal de San Miguel del Tucumán en la que trabajamos junto a 6 compañeros. No solo utilizamos las tecnologías aprendidas en el bootcamp, sino que le agregamos otras nuevas (como typescript) e incorporamos librerías como Ant D y AOA. Experiencia increíble!
-                          </p>
-                          <div>
-                              <img class="iconBW" src="./images/htmlBW.png" alt="" srcset="">
-                              <img class="iconBW" src="./images/jsBW.png" alt="" srcset="">
-                              <img  class="iconBW" src="./images/cssBW.png" alt="">
-                              <img class="iconBW" src="./images/postgreBW.png" alt="" srcset="">
-                              <img class="iconBW" src="./images/sassBW.png" alt="">
-                              
-                          </div>
-                      </div>
-                      <div class="container-img"> 
-                              <img  class="img-proj img-proj--left" src="./images/LasEncinasApp.png" alt="image of first project">
-                              <div class="linked-project">
-                                  <div>
-                                      <a href="https://las-encinas-boutique-omega.vercel.app/home" target="_blank" ><i class="fa-brands fa-chrome"></i></a>
-                                      <span>Website</span>
-                                  </div>
-                                  <div>
-                                      <a href="https://github.com/thomasrey99/Las-Encinas-Boutique-" target="_blank" ><img class="linked" src="./images/github.png" alt="" srcset=""></a>
-                                      <span>Github</span>
-                                  </div>
-                              </div>
-                      </div>
-                  </div>
-          </section>          
-<section id="aboutMe">
-    <div class="bg-mb"></div>
-    <h2>Acerca de mi</h2>
-    <div class="container-aboutMe">
-      <div class="aboutMe-body">
-        <h3>Siempre hay algo nuevo por descubrir, siempre hay algo nuevo por aprender.</h3>
-        <p>
-          Mi fascinación por la tecnología surgió desde mis primeros días, y desde entonces, mi camino ha estado marcado por un deseo constante de explorar, aprender y experimentar.
-          Me destaco en la creación de aplicaciones y sistemas de alto rendiemiento. Sin embargo, mi mayor fortaleza radica en la capacidad para aprender de manera continua y adaptarme a los desafíos tecnológicos en constante cambio.
-        </p>
-      </div>
-      <div class="aboutMe-pic">
-        <img src="../images/aboutMe.jpeg" alt="Acerca de mí">
-      </div>
-    </div>
-  </section>
-  
-          
-          <section id="contactMe" >
-              <div class="contactMe-body">
-                  <div class="body-title">Trabajemos juntos!</div>
-                  <div >
-                      <a href="./contactMe.html">
-                          <button class="body-button" href="./contactMe.html">
-                              Contáctame!
-                          <i class="fas fa-arrow-alt-circle-right"></i>
-                          </button>
-                      </a>
-                  </div> 
+            </div>
+
+            <div class="container-img">
+              <img
+                class="img-proj img-proj--left"
+                src="./images/Rick&MortyApp.png"
+                alt="image of first project"
+              />
+              <div class="linked-project">
+                <div>
+                  <a
+                    href="https://github.com/MarianoMasondo/rick_and_morty_marian"
+                    target="_blank"
+                    ><img class="linked" src="./images/github.png" alt="github"
+                  /></a>
+                  <span>Github</span>
+                </div>
               </div>
-              <div class="contactMe-footer">
-                  <div>©2023 Mariano Masondo</div>
-                  <div>Full Stack Web Developer</div>
-                  <div>
-                      <nav class="footer-nav">
-                          <ul>
-                              <li>
-                                  <a href="https://www.linkedin.com/in/mariano-masondo-7026b0254/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i>Linkedin</a>
-                              </li>
-                              <li>
-                                <a href="https://github.com/MarianoMasondo" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>Github</a>
-                              </li>
-                              <li>
-                                <a href="https://twitter.com/mason_nano" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i>Twitter</a>
-                              </li>
-                              <li>
-                                  <a href="mailto:nanomason@gmail.com?subject=Job Offer" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i>Gmail</a>
-                              </li>
-                          </ul>
-                      </nav>
-                  </div>
+            </div>
+          </div>
+          <div class="project-container">
+            <div class="container-img">
+              <img
+                class="img-proj img-proj--left"
+                src="./images/DriversApp.png"
+                alt="image of second project"
+              />
+              <div class="linked-project">
+                <div>
+                  <a
+                    href="https://github.com/MarianoMasondo/cr-pi-drivers-Marian"
+                    target="_blank"
+                    ><img class="linked" src="./images/github.png" alt="github"
+                  /></a>
+                  <span>Github</span>
+                </div>
               </div>
-          </section>
-      </main>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script>
-       $(document).ready(function () {
-    $('a[href^="#"]').on('click', function (event) {
-        event.preventDefault();
-        var target = this.hash;
-        var $target = $(target);
+            </div>
+            <div class="project-text">
+              <h4>-Proyecto 2-</h4>
+              <h2>Drivers app</h2>
+              <p>
+                Esta fue mi primera aplicacción full-stack completa que pude
+                realizar solo. En esta app renderizo conductores de carrera
+                desde una api pública en la que se le pueden aplicar diferentes
+                filtros, ordenes, etc, para poder buscar un conductor específico
+                o varios, de una misma escudería, entre otras cosas. Si inicias
+                seción puedes crear un conductor nuevo tú mismo!
+              </p>
+              <div>
+                <img
+                  class="iconBW"
+                  src="./images/htmlBW.png"
+                  alt=""
+                  srcset=""
+                />
+                <img class="iconBW" src="./images/jsBW.png" alt="" srcset="" />
+                <img
+                  class="iconBW"
+                  src="./images/reactBW.png"
+                  alt=""
+                  srcset=""
+                />
+                <img
+                  class="iconBW"
+                  src="./images/postgreBW.png"
+                  alt=""
+                  srcset=""
+                />
+                <img class="iconBW" src="./images.png" alt="" srcset="" />
+              </div>
+            </div>
+          </div>
+          <div class="project-container">
+            <div class="project-text">
+              <h4>-Proyecto 3-</h4>
+              <h2>E-commerce Las Encinas Boutique</h2>
+              <p>
+                Esta es mi primera experiencia trabajando con la metodología
+                SCRUM. Es un proyecto de una chocolatería artesanal de San
+                Miguel del Tucumán en la que trabajamos junto a 6 compañeros. No
+                solo utilizamos las tecnologías aprendidas en el bootcamp, sino
+                que le agregamos otras nuevas (como typescript) e incorporamos
+                librerías como Ant D y AOA. Experiencia increíble!
+              </p>
+              <div>
+                <img
+                  class="iconBW"
+                  src="./images/htmlBW.png"
+                  alt=""
+                  srcset=""
+                />
+                <img class="iconBW" src="./images/jsBW.png" alt="" srcset="" />
+                <img class="iconBW" src="./images/cssBW.png" alt="" />
+                <img
+                  class="iconBW"
+                  src="./images/postgreBW.png"
+                  alt=""
+                  srcset=""
+                />
+                <img class="iconBW" src="./images/sassBW.png" alt="" />
+              </div>
+            </div>
+            <div class="container-img">
+              <img
+                class="img-proj img-proj--left"
+                src="./images/LasEncinasApp.png"
+                alt="image of first project"
+              />
+              <div class="linked-project">
+                <div>
+                  <a
+                    href="https://las-encinas-boutique-omega.vercel.app/home"
+                    target="_blank"
+                    ><i class="fa-brands fa-chrome"></i
+                  ></a>
+                  <span>Website</span>
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/thomasrey99/Las-Encinas-Boutique-"
+                    target="_blank"
+                    ><img
+                      class="linked"
+                      src="./images/github.png"
+                      alt=""
+                      srcset=""
+                  /></a>
+                  <span>Github</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="aboutMe">
+        <div class="bg-mb"></div>
+        <h2>Acerca de mi</h2>
+        <div class="container-aboutMe">
+          <div class="aboutMe-body">
+            <h3>
+              Siempre hay algo nuevo por descubrir, siempre hay algo nuevo por
+              aprender.
+            </h3>
+            <p>
+              Mi fascinación por la tecnología surgió desde mis primeros días, y
+              desde entonces, mi camino ha estado marcado por un deseo constante
+              de explorar, aprender y experimentar. Me destaco en la creación de
+              aplicaciones y sistemas de alto rendiemiento. Sin embargo, mi
+              mayor fortaleza radica en la capacidad para aprender de manera
+              continua y adaptarme a los desafíos tecnológicos en constante
+              cambio.
+            </p>
+          </div>
+          <div class="aboutMe-pic">
+            <img src="../images/aboutMe.jpeg" alt="Acerca de mí" />
+          </div>
+        </div>
+      </section>
 
-       
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-        }, 50, 'swing');
-    });
+      <section id="contactMe">
+        <div class="contactMe-body">
+          <div class="body-title">Trabajemos juntos!</div>
+          <div>
+            <a href="./contactMe.html">
+              <button class="body-button" href="./contactMe.html">
+                Contáctame!
+                <i class="fas fa-arrow-alt-circle-right"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="contactMe-footer">
+          <div>©2023 Mariano Masondo</div>
+          <div>Full Stack Web Developer</div>
+          <div>
+            <nav class="footer-nav">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/mariano-masondo-7026b0254/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-linkedin"></i>Linkedin</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/MarianoMasondo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-github"></i>Github</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/mason_nano"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-twitter"></i>Twitter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="mailto:nanomason@gmail.com?subject=Job Offer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fas fa-envelope"></i>Gmail</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('a[href^="#"]').on("click", function (event) {
+          event.preventDefault();
+          var target = this.hash;
+          var $target = $(target);
 
-    $('a[href="#home"]').on('click', function (event) {
-        event.preventDefault();
-        $('html, body').stop().animate({
-            'scrollTop': 0
-        }, 50, 'swing');
-    });
-});
+          $("html, body").stop().animate(
+            {
+              scrollTop: $target.offset().top,
+            },
+            50,
+            "swing"
+          );
+        });
 
-
-
-
+        $('a[href="#home"]').on("click", function (event) {
+          event.preventDefault();
+          $("html, body").stop().animate(
+            {
+              scrollTop: 0,
+            },
+            50,
+            "swing"
+          );
+        });
+      });
     </script>
     <script src="script.js"></script>
   </body>

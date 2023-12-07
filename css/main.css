@@ -499,7 +499,6 @@
   flex-direction: column;
   height: 100%;
   text-align: center;
-  
 }
 
 .aboutMe-body {
@@ -535,7 +534,7 @@
 .aboutMe-pic img {
   width: 80%;
   height: 70%;
-  border-radius: 10px; 
+  border-radius: 10px;
   margin-left: 10%;
 }
 
@@ -912,7 +911,6 @@
     font-size: 6vw;
   }
 }
-
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .header-title {

@@ -532,7 +532,7 @@
 }
 
 .aboutMe-pic img {
-  width: 80%;
+  width: 70%;
   height: 70%;
   border-radius: 10px;
   margin-left: 10%;
@@ -865,7 +865,6 @@
     display: flex;
     border-radius: 10px;
     align-items: center;
-    grid-area: amImg;
     -webkit-box-shadow: inset 10px 10px 50px #fff;
     box-shadow: inset 80px 1px 50px #03121d, inset -80px -1px 50px #03121d;
   }
@@ -1061,7 +1060,7 @@
     align-items: center;
   }
   .aboutMe-pic {
-    max-width: 100%;
+    max-width: 70%;
     margin-top: 3%;
   }
   .aboutMe-body {

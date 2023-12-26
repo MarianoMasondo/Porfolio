@@ -319,7 +319,8 @@
                   <a
                     href="https://youtu.be/1ni9q-KY798"
                     target="_blank"
-                    ><i class="fa-brands fa-youtube"></i></a>
+                    ><img class="linked" src="./images/youtube.png" alt="youtube"
+                    /></a>
                   <span>Youtube</span>
                 </div>
                 <div>
@@ -442,7 +443,8 @@
                   <a
                     href="https://youtu.be/Z9o9xNGdkVU"
                     target="_blank"
-                    ><i class="fa-brands fa-youtube"></i
+                    ><img class="linked" src="./images/youtube.png" alt="youtube"
+                    /></i
                   ></a>
                   <span>Youtube</span>
                 </div>
@@ -582,5 +584,14 @@
       });
     </script>
     <script src="script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var savefromLink = document.querySelector('a[savefrom_lm_index="0"]');
+        if (savefromLink) {
+          savefromLink.parentNode.removeChild(savefromLink);
+        }
+      });
+    </script>
+    
   </body>
 </html>

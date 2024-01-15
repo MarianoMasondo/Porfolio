@@ -1067,3 +1067,38 @@
     width: 80%;
   }
 }
+
+/* Añade este estilo al final de tu archivo de estilo CSS o en tu etiqueta <style> en el head */
+.containerSkills {
+  display: flex;
+  justify-content: space-between;
+}
+
+.softSkills,
+.languages {
+  width: 48%; /* Ajusta según sea necesario */
+}
+
+/* Añade este estilo para alinear los íconos de las habilidades */
+.languagesIcon-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.languagesIcon {
+  width: 48px; /* Ajusta según sea necesario */
+  height: 48px; /* Ajusta según sea necesario */
+}
+
+/* Añade este estilo para ajustar la altura de las habilidades */
+.skills-subtitles {
+  margin-bottom: 0; /* Elimina el espacio inferior */
+}
+
+.softSkills-items ul,
+.languagesIcon-container {
+  margin-bottom: 0; /* Elimina el espacio inferior */
+}
+

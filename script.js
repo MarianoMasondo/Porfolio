@@ -16,6 +16,7 @@ $(window).scroll(function () {
     $("#box-3").fadeIn(2500);
   }
 });
+
 $("#box-1").click(selected);
 $("#box-2").click(selected);
 $("#box-3").click(selected);

@@ -25,17 +25,21 @@
   .project-container,
   .project-container:nth-child(even) {
     grid-template-columns: 1fr;
+    gap: 26px;
   }
 
-  .project-container:nth-child(even) .container-img {
-    order: 1;
-  }
-
+  .project-container .project-text,
   .project-container:nth-child(even) .project-text {
-    order: 2;
+    order: 1;
     text-align: left;
   }
 
+  .project-container .container-img,
+  .project-container:nth-child(even) .container-img {
+    order: 2;
+  }
+
+  .project-container .project-text > div:last-child,
   .project-container:nth-child(even) .project-text > div:last-child {
     justify-content: flex-start;
   }
@@ -156,6 +160,29 @@
 
   .softSkills-items ul {
     grid-template-columns: 1fr;
+  }
+
+  .project-container,
+  .project-container:nth-child(even) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 54px;
+  }
+
+  .project-container .project-text,
+  .project-container:nth-child(even) .project-text {
+    order: 1;
+    text-align: left;
+  }
+
+  .project-container .container-img,
+  .project-container:nth-child(even) .container-img {
+    order: 2;
+  }
+
+  .project-container .project-text > div:last-child,
+  .project-container:nth-child(even) .project-text > div:last-child {
+    justify-content: flex-start;
   }
 
   .container-img,
@@ -282,13 +309,13 @@
   }
 
   .hero-actions {
-  width: 100%;
-}
+    width: 100%;
+  }
 
-.hero-projects-button,
-.hero-cv-button {
-  width: 100%;
-}
+  .hero-projects-button,
+  .hero-cv-button {
+    width: 100%;
+  }
 
   .skillsTitle,
   .project-header,
@@ -318,6 +345,23 @@
   .languagesIcon-container > div {
     width: 82px;
     min-height: 82px;
+  }
+
+  .project-container,
+  .project-container:nth-child(even) {
+    gap: 22px;
+    margin-bottom: 58px;
+  }
+
+  .project-container .project-text,
+  .project-container:nth-child(even) .project-text {
+    order: 1;
+    text-align: left;
+  }
+
+  .project-container .container-img,
+  .project-container:nth-child(even) .container-img {
+    order: 2;
   }
 
   .container-img,

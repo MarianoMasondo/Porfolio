@@ -1110,22 +1110,24 @@ header {
 }
 
 .footer-nav--contact a {
-  width: 44px;
-  height: 44px;
+  width: 54px;
+  height: 54px;
   border: 1px solid rgba(100, 255, 218, 0.35);
-  border-radius: 6px;
+  border-radius: 8px;
   display: grid;
   place-items: center;
   color: var(--green);
-  font-size: 1.1rem;
+  font-size: 1.45rem;
   transition:
     background 0.2s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .footer-nav--contact a:hover {
   background: var(--green-soft);
   transform: translateY(-2px);
+  border-color: var(--green);
 }
 
 /* =========================

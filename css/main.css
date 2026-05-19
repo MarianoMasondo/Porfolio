@@ -881,12 +881,6 @@ header {
   line-height: 1.85;
 }
 
-.aboutMe-body p::first-letter {
-  color: var(--green);
-  font-size: 1.8rem;
-  font-weight: 800;
-}
-
 /* =========================
    CONTACT SECTION INDEX
 ========================= */

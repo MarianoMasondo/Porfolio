@@ -18,7 +18,6 @@ Más que ser solamente una página técnica, este portfolio busca mostrar mi evo
 ## Secciones principales
 
 - **Inicio:** presentación personal y breve descripción de mi perfil.
-- **Educación:** formación como Full Stack Developer.
 - **Skills:** habilidades técnicas, habilidades blandas e idiomas.
 - **Proyectos:** selección de aplicaciones y sitios desarrollados.
 - **Acerca de mí:** una mirada más personal sobre mi vínculo con la tecnología.

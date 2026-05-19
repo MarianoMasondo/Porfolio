@@ -98,9 +98,29 @@ softSkillItems.forEach((item, index) => {
 });
 
 /* =========================
+   PROGRAMMING SKILLS LOOP
+   - Duplica los íconos para que el banner sea infinito
+========================= */
+
+const skillsMarquee = document.querySelector(".languagesIcon-container");
+
+if (skillsMarquee && !skillsMarquee.dataset.cloned) {
+  const originalSkills = Array.from(skillsMarquee.children);
+
+  originalSkills.forEach((skill) => {
+    const clonedSkill = skill.cloneNode(true);
+    clonedSkill.setAttribute("aria-hidden", "true");
+    skillsMarquee.appendChild(clonedSkill);
+  });
+
+  skillsMarquee.dataset.cloned = "true";
+}
+
+/* =========================
    CSS FIXES INYECTADOS
-   - Pisa estilos viejos de soft skills
+   - Pisa estilos viejos
    - Estiliza botón real del hero
+   - Hace loop infinito real en programming skills
 ========================= */
 
 const style = document.createElement("style");
@@ -186,6 +206,38 @@ style.innerHTML = `
     background: rgba(17, 34, 64, 0.86);
   }
 
+  .languages {
+    overflow: hidden;
+  }
+
+  .languagesIcon-container {
+    width: max-content;
+    min-width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    animation: skillsLoop 26s linear infinite !important;
+    will-change: transform;
+  }
+
+  .languagesIcon-container:hover {
+    animation-play-state: paused !important;
+  }
+
+  .languagesIcon-container > div {
+    flex-shrink: 0;
+  }
+
+  @keyframes skillsLoop {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
   @media (max-width: 480px) {
     .hero-projects-button {
       width: 100%;
@@ -193,6 +245,10 @@ style.innerHTML = `
 
     .softSkills-items li {
       min-height: 68px;
+    }
+
+    .languagesIcon-container {
+      animation-duration: 18s !important;
     }
   }
 `;

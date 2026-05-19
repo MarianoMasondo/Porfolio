@@ -2,24 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <script
       src="https://kit.fontawesome.com/31bc8b6bf0.js"
       crossorigin="anonymous"
     ></script>
+
     <link rel="stylesheet" href="./css/main.css" />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
     />
+
     <link rel="icon" type="image/jpeg" href="./images/favicon-Marian.png" />
+
     <style>
       html {
         scroll-behavior: smooth;
       }
     </style>
+
     <title>Mi Portafolio</title>
   </head>
+
   <body>
     <header>
       <nav class="container-nav">
@@ -30,17 +38,34 @@
               <i class="fas fa-smile-wink"></i>
             </a>
           </div>
-          <button id="btn-hamburger">
+
+          <button id="btn-hamburger" type="button" aria-label="Abrir menú">
             <i class="bi bi-list"></i>
           </button>
         </div>
+
         <ul class="undeploy">
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#education">Skills</a></li>
-          <li><a href="#projects">Proyectos</a></li>
-          <li><a href="#aboutMe">Acerca de mi</a></li>
-          <li><a href="#contactMe">Contacto</a></li>
+          <li>
+            <a href="#home">Inicio</a>
+          </li>
+
+          <li>
+            <a href="#education">Skills</a>
+          </li>
+
+          <li>
+            <a href="#projects">Proyectos</a>
+          </li>
+
+          <li>
+            <a href="#aboutMe">Acerca de mi</a>
+          </li>
+
+          <li>
+            <a href="#contactMe">Contacto</a>
+          </li>
         </ul>
+
         <div>
           <a class="work-request" href="./contactMe.html">
             Trabaja conmigo!
@@ -56,25 +81,30 @@
           <div class="container-line">
             <div class="line"></div>
           </div>
+
           <h5 class="highlight-info">&#127891; FullStack Developer</h5>
         </div>
+
         <div class="flex-row">
           <div class="container-line">
             <div class="line"></div>
           </div>
+
           <h5 class="highlight-info highlight-info__middle">
             &#127969; Lugar de residencia: Argentina
           </h5>
         </div>
       </div>
+
       <div class="profile-information">
         <div>
           <img
             id="profImg"
-            src=".//images//marian-hello.jpeg"
+            src="./images/marian-hello.jpeg"
             alt="profile-img"
           />
         </div>
+
         <div class="container-header">
           <h1 class="header-title">
             Hola gente! <br />
@@ -83,6 +113,7 @@
               <span class="highlight">Marian</span>
             </span>
           </h1>
+
           <p class="header-intro">
             Soy un entusiasta de la tecnología con una firme dedicación a
             aprender y evolucionar continuamente en el campo del desarrollo de
@@ -91,42 +122,73 @@
             contribuyendo así al progreso y la excelencia en este emocionante
             ámbito.
           </p>
+
+          <a class="hero-projects-button" href="#projects">Ver proyectos</a>
         </div>
       </div>
     </section>
+
     <main class="summary">
       <section id="home"></section>
+
       <section id="education">
         <div class="educationContainer">
           <div>
             <h2>Mi camino educativo</h2>
+
             <div class="containerPath">
               <div>
                 <p class="education-years">2023-2023</p>
                 <p>Full-Stack Developer Bootcamp</p>
               </div>
+
               <p class="institution">HENRY</p>
             </div>
           </div>
+
           <div class="wrapperSkillsLanguages">
             <h2 class="skillsTitle">Skills</h2>
+
             <div class="containerSkills">
               <div class="softSkills">
                 <div>
                   <h3 class="skills-subtitles">Soft Skills</h3>
                 </div>
+
                 <div class="softSkills-items">
                   <ul>
-                    <li>Creativo</li>
-                    <li>Curioso</li>
-                    <li>SCRUM</li>
-                  </ul>
-                  <ul>
-                    <li>Adaptable</li>
-                    <li>Trabajo en equipo</li>
-                    <li>AGILE</li>
+                    <li>
+                      <i class="fas fa-puzzle-piece soft-skill-icon"></i>
+                      <span>Resolución de problemas</span>
+                    </li>
+
+                    <li>
+                      <i class="fas fa-book-open soft-skill-icon"></i>
+                      <span>Aprendizaje continuo</span>
+                    </li>
+
+                    <li>
+                      <i class="fas fa-users soft-skill-icon"></i>
+                      <span>Trabajo en equipo</span>
+                    </li>
+
+                    <li>
+                      <i class="fas fa-comment-dots soft-skill-icon"></i>
+                      <span>Comunicación clara</span>
+                    </li>
+
+                    <li>
+                      <i class="fas fa-arrows-rotate soft-skill-icon"></i>
+                      <span>Adaptabilidad</span>
+                    </li>
+
+                    <li>
+                      <i class="fas fa-magnifying-glass soft-skill-icon"></i>
+                      <span>Atención al detalle</span>
+                    </li>
                   </ul>
                 </div>
+
                 <div class="countriesFlags">
                   <div>
                     <img
@@ -136,6 +198,7 @@
                     />
                     <span>Español <br />(Nativo)</span>
                   </div>
+
                   <div>
                     <img
                       class="flags"
@@ -144,6 +207,7 @@
                     />
                     <span>Inglés <br />(Avanzado)</span>
                   </div>
+
                   <div>
                     <img
                       class="flags"
@@ -154,10 +218,12 @@
                   </div>
                 </div>
               </div>
+
               <div class="languages">
                 <div>
                   <h3 class="skills-subtitles">Programming Skills</h3>
                 </div>
+
                 <div class="languagesIcon-container">
                   <div>
                     <img
@@ -167,6 +233,7 @@
                     />
                     <span>HTML</span>
                   </div>
+
                   <div>
                     <img
                       class="languagesIcon"
@@ -175,6 +242,7 @@
                     />
                     <span>CSS</span>
                   </div>
+
                   <div>
                     <img
                       class="languagesIcon"
@@ -183,6 +251,7 @@
                     />
                     <span>Bootstrap</span>
                   </div>
+
                   <div>
                     <img
                       class="languagesIcon"
@@ -191,6 +260,7 @@
                     />
                     <span>JavaScript</span>
                   </div>
+
                   <div>
                     <img
                       class="languagesIcon"
@@ -199,6 +269,7 @@
                     />
                     <span>Typescript</span>
                   </div>
+
                   <div>
                     <img
                       class="languagesIcon"
@@ -207,6 +278,7 @@
                     />
                     <span>REACT</span>
                   </div>
+
                   <div>
                     <img
                       class="languagesIcon"
@@ -215,6 +287,7 @@
                     />
                     <span>Redux</span>
                   </div>
+
                   <div>
                     <img
                       class="languagesIcon"
@@ -223,6 +296,7 @@
                     />
                     <span>Sequelize</span>
                   </div>
+
                   <div>
                     <img
                       class="languagesIcon"
@@ -231,6 +305,7 @@
                     />
                     <span>PostgreSQL</span>
                   </div>
+
                   <div>
                     <img
                       class="languagesIcon"
@@ -239,6 +314,7 @@
                     />
                     <span>NodeJS</span>
                   </div>
+
                   <div>
                     <img
                       class="languagesIcon"
@@ -252,40 +328,52 @@
             </div>
           </div>
         </div>
+
         <div class="curriculumContainer">
           <i class="fas fa-cloud-download"></i>
+
           <a
             id="cvLink"
             class="cv"
             href="./file/CV Mariano Masondo - Español.pdf"
             target="_blank"
-            >Curriculum Vitae</a
+            rel="noopener noreferrer"
           >
+            Curriculum Vitae
+          </a>
         </div>
       </section>
+
       <section class="service-pic">
         <h3>“Está bien <span> celebrar el éxito, </span></h3>
+
         <h3>
           pero es más importante prestar atención
           <span> a las lecciones del fracaso”</span>
         </h3>
+
         <h6><i>-Bill Gates</i></h6>
+
         <img
           src="./images/marian-computer.png"
           id="avatarComputer"
           alt="image avatar with computer"
         />
       </section>
+
       <section id="projects">
         <div>
           <h5></h5>
           <h2 class="project-header">Algunos de mis proyectos.</h2>
         </div>
+
         <div class="flex-spaceAround">
           <div class="project-container">
             <div class="project-text">
               <h4>-Proyecto 1-</h4>
+
               <h2>Rick & Morty App</h2>
+
               <p>
                 Es es una app en dónde tuve mi primer contacto con lo que era
                 programar. En esta app se puede renderizar los personajes de
@@ -294,28 +382,14 @@
                 comenzar trabajar con un Server y un Cliente y afianzar lo que
                 había aprendidos de estados de Redux!
               </p>
+
               <div>
-                <img
-                  class="iconBW"
-                  src="./images/html.png"
-                  alt=""
-                  srcset=""
-                />
+                <img class="iconBW" src="./images/html.png" alt="" />
                 <img class="iconBW" src="./images/css-3.png" alt="" />
-                <img class="iconBW" src="./images/js.png" alt="" srcset="" />
-                <img
-                  class="iconBW"
-                  src="./images/react-logo.png"
-                  alt=""
-                  srcset=""
-                />
-                <img
-                  class="iconBW"
-                  src="./images/postgre.png"
-                  alt=""
-                  srcset=""
-                />
-                <img class="iconBW" src="./images.png" alt="" srcset="" />
+                <img class="iconBW" src="./images/js.png" alt="" />
+                <img class="iconBW" src="./images/react-logo.png" alt="" />
+                <img class="iconBW" src="./images/postgre.png" alt="" />
+                <img class="iconBW" src="./images/redux.png" alt="" />
               </div>
             </div>
 
@@ -325,33 +399,52 @@
                 src="./images/Rick&MortyApp.png"
                 alt="image of first project"
               />
+
               <div class="linked-project">
                 <div>
                   <a
                     href="https://youtu.be/1ni9q-KY798"
                     target="_blank"
-                    ><img class="linked" src="./images/youtube.png" alt="youtube"
-                    /></a>
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="linked"
+                      src="./images/youtube.png"
+                      alt="youtube"
+                    />
+                  </a>
                   <span>Youtube</span>
                 </div>
+
                 <div>
                   <a
                     href="https://rick-and-morty-marian.vercel.app/"
                     target="_blank"
-                    ><i class="fa-brands fa-chrome"></i></a>
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa-brands fa-chrome"></i>
+                  </a>
                   <span>Website</span>
                 </div>
+
                 <div>
                   <a
                     href="https://github.com/MarianoMasondo/rick_and_morty_marian"
                     target="_blank"
-                    ><img class="linked" src="./images/github.png" alt="github"
-                  /></a>
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="linked"
+                      src="./images/github.png"
+                      alt="github"
+                    />
+                  </a>
                   <span>Github</span>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="project-container">
             <div class="container-img">
               <img
@@ -359,36 +452,56 @@
                 src="./images/DriversApp.png"
                 alt="image of second project"
               />
+
               <div class="linked-project">
                 <div>
                   <a
                     href="https://youtu.be/RSjCyd_X9TU"
                     target="_blank"
-                    ><img class="linked" src="./images/youtube.png" alt="youtube"
-                  /></a>
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="linked"
+                      src="./images/youtube.png"
+                      alt="youtube"
+                    />
+                  </a>
                   <span>Youtube</span>
-                </div>  
+                </div>
+
                 <div>
                   <a
                     href="https://cr-pi-drivers-marian.vercel.app/"
                     target="_blank"
-                    ><i class="fa-brands fa-chrome"></i
-                  ></a>
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa-brands fa-chrome"></i>
+                  </a>
                   <span>Website</span>
-                </div>        
+                </div>
+
                 <div>
                   <a
                     href="https://github.com/MarianoMasondo/cr-pi-drivers-Marian"
                     target="_blank"
-                    ><img class="linked" src="./images/github.png" alt="github"
-                  /></a>
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="linked"
+                      src="./images/github.png"
+                      alt="github"
+                    />
+                  </a>
                   <span>Github</span>
-                </div>               
+                </div>
               </div>
             </div>
+
             <div class="project-text">
               <h4>-Proyecto 2-</h4>
+
               <h2>Drivers app</h2>
+
               <p>
                 Esta fue mi primera aplicacción full-stack completa que pude
                 realizar solo. En esta app renderizo conductores de carrera
@@ -397,35 +510,24 @@
                 o varios, de una misma escudería, entre otras cosas. Si inicias
                 seción puedes crear un conductor nuevo tú mismo!
               </p>
+
               <div>
-                <img
-                  class="iconBW"
-                  src="./images/html.png"
-                  alt=""
-                  srcset=""
-                />
+                <img class="iconBW" src="./images/html.png" alt="" />
                 <img class="iconBW" src="./images/css-3.png" alt="" />
-                <img class="iconBW" src="./images/js.png" alt="" srcset="" />
-                <img
-                  class="iconBW"
-                  src="./images/react-logo.png"
-                  alt=""
-                  srcset=""
-                />
-                <img
-                  class="iconBW"
-                  src="./images/postgre.png"
-                  alt=""
-                  srcset=""
-                />
-                <img class="iconBW" src="./images.png" alt="" srcset="" />
+                <img class="iconBW" src="./images/js.png" alt="" />
+                <img class="iconBW" src="./images/react-logo.png" alt="" />
+                <img class="iconBW" src="./images/postgre.png" alt="" />
+                <img class="iconBW" src="./images/sequelize.png" alt="" />
               </div>
             </div>
           </div>
+
           <div class="project-container">
             <div class="project-text">
               <h4>-Proyecto 3-</h4>
+
               <h2>E-commerce Las Encinas Boutique</h2>
+
               <p>
                 Esta es mi primera experiencia trabajando con la metodología
                 SCRUM. Es un proyecto de una chocolatería artesanal de San
@@ -434,58 +536,64 @@
                 que le agregamos otras nuevas (como typescript) e incorporamos
                 librerías como Ant D y AOA. Experiencia increíble!
               </p>
+
               <div>
-                <img
-                  class="iconBW"
-                  src="./images/html.png"
-                  alt=""
-                  srcset=""
-                />
+                <img class="iconBW" src="./images/html.png" alt="" />
                 <img class="iconBW" src="./images/css-3.png" alt="" />
-                <img class="iconBW" src="./images/js.png" alt="" srcset="" />
-                <img class="iconBW" src="./images/react-logo.png" alt="" srcset="" />
-                <img class="iconBW" src="./images/postgre.png" alt="" srcset="" />
+                <img class="iconBW" src="./images/js.png" alt="" />
+                <img class="iconBW" src="./images/react-logo.png" alt="" />
+                <img class="iconBW" src="./images/postgre.png" alt="" />
               </div>
             </div>
+
             <div class="container-img">
               <img
                 class="img-proj img-proj--left"
                 src="./images/LasEncinasApp.png"
                 alt="image of third project"
               />
+
               <div class="linked-project">
                 <div>
                   <a
                     href="https://youtu.be/Z9o9xNGdkVU"
                     target="_blank"
-                    ><img class="linked" src="./images/youtube.png" alt="youtube"
-                    /></i
-                  ></a>
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="linked"
+                      src="./images/youtube.png"
+                      alt="youtube"
+                    />
+                  </a>
                   <span>Youtube</span>
                 </div>
+
                 <div>
                   <a
                     href="https://las-encinas-boutique-omega.vercel.app/home"
                     target="_blank"
-                    ><i class="fa-brands fa-chrome"></i
-                  ></a>
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa-brands fa-chrome"></i>
+                  </a>
                   <span>Website</span>
                 </div>
+
                 <div>
                   <a
                     href="https://github.com/thomasrey99/Las-Encinas-Boutique-"
                     target="_blank"
-                    ><img
-                      class="linked"
-                      src="./images/github.png"
-                      alt=""
-                      srcset=""
-                  /></a>
+                    rel="noopener noreferrer"
+                  >
+                    <img class="linked" src="./images/github.png" alt="github" />
+                  </a>
                   <span>Github</span>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="project-container">
             <div class="container-img">
               <img
@@ -493,114 +601,143 @@
                 src="./images/weaherApp.jpg"
                 alt="image of fourth project"
               />
+
               <div class="linked-project">
                 <div>
                   <a
                     href="https://www.youtube.com/watch?v=-pOUvA8ZDmg&t=7s"
                     target="_blank"
-                    ><img class="linked" src="./images/youtube.png" alt="youtube"
-                  /></a>
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="linked"
+                      src="./images/youtube.png"
+                      alt="youtube"
+                    />
+                  </a>
                   <span>Youtube</span>
-                </div>   
+                </div>
+
                 <div>
                   <a
                     href="https://marian-weather.vercel.app/"
                     target="_blank"
-                    ><i class="fa-brands fa-chrome"></i
-                  ></a>
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa-brands fa-chrome"></i>
+                  </a>
                   <span>Website</span>
-                </div>            
+                </div>
+
                 <div>
                   <a
                     href="https://github.com/MarianoMasondo/Weather-App"
                     target="_blank"
-                    ><img class="linked" src="./images/github.png" alt="github"
-                  /></a>
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="linked"
+                      src="./images/github.png"
+                      alt="github"
+                    />
+                  </a>
                   <span>Github</span>
-                </div>               
+                </div>
               </div>
             </div>
+
             <div class="project-text">
               <h4>-Proyecto 4-</h4>
+
               <h2>Weather app</h2>
+
               <p>
-                Consulta el clima global al instante con esta aplicación hecha con React y Material UI. Accede a datos precisos en tiempo real, y disfruta de una interfaz intuitiva. Planifica tus actividades con confianza y mantente informado, ¡donde sea que estés en el mundo! 🌍⛅️
+                Consulta el clima global al instante con esta aplicación hecha
+                con React y Material UI. Accede a datos precisos en tiempo real,
+                y disfruta de una interfaz intuitiva. Planifica tus actividades
+                con confianza y mantente informado, ¡donde sea que estés en el
+                mundo! 🌍⛅️
               </p>
+
               <div>
-                <img
-                  class="iconBW"
-                  src="./images/html.png"
-                  alt=""
-                  srcset=""
-                />
+                <img class="iconBW" src="./images/html.png" alt="" />
                 <img class="iconBW" src="./images/css-3.png" alt="" />
-                <img class="iconBW" src="./images/js.png" alt="" srcset="" />
-                <img
-                  class="iconBW"
-                  src="./images/react-logo.png"
-                  alt=""
-                  srcset=""
-                />
+                <img class="iconBW" src="./images/js.png" alt="" />
+                <img class="iconBW" src="./images/react-logo.png" alt="" />
                 <img
                   class="iconBW"
                   src="./images/material-ui-logo-png-transparent.png"
                   alt=""
-                  srcset=""
                 />
-                <img class="iconBW" src="./images.png" alt="" srcset="" />
               </div>
             </div>
           </div>
+
           <div class="project-container">
             <div class="project-text">
               <h4>-Proyecto 5-</h4>
+
               <h2>E-commerce Tienda Muebles</h2>
+
               <p>
-                Este proyecto, impulsado por mi deseo de fortalecer mis habilidades de Front-End, es el resultado de aplicar lo aprendido en un tutorial de Bootstrap. Desde el diseño hasta la implementación, cada detalle refleja mi dedicación a la mejora continua. Esta práctica no solo consolidó mis conocimientos en Bootstrap, sino que también me equipó con habilidades esenciales para proyectos futuros.
+                Este proyecto, impulsado por mi deseo de fortalecer mis
+                habilidades de Front-End, es el resultado de aplicar lo aprendido
+                en un tutorial de Bootstrap. Desde el diseño hasta la
+                implementación, cada detalle refleja mi dedicación a la mejora
+                continua. Esta práctica no solo consolidó mis conocimientos en
+                Bootstrap, sino que también me equipó con habilidades esenciales
+                para proyectos futuros.
               </p>
+
               <div>
+                <img class="iconBW" src="./images/html.png" alt="" />
+                <img class="iconBW" src="./images/css-3.png" alt="" />
+                <img class="iconBW" src="./images/js.png" alt="" />
                 <img
                   class="iconBW"
-                  src="./images/html.png"
+                  src="./images/bootstrap_plain_logo_icon_146619.png"
                   alt=""
-                  srcset=""
                 />
-                <img class="iconBW" src="./images/css-3.png" alt="" />
-                <img class="iconBW" src="./images/js.png" alt="" srcset="" />
-                <img class="iconBW" src="./images/bootstrap_plain_logo_icon_146619.png" alt="" />
               </div>
             </div>
+
             <div class="container-img">
               <img
                 class="img-proj img-proj--left"
                 src="./images/Tineda muebles.png"
                 alt="image of fifth project"
               />
+
               <div class="linked-project">
                 <div>
                   <a
                     href="https://youtu.be/ma8tWmxUvo4"
                     target="_blank"
-                    ><img class="linked" src="./images/youtube.png" alt="youtube"
-                    /></i
-                  ></a>
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="linked"
+                      src="./images/youtube.png"
+                      alt="youtube"
+                    />
+                  </a>
                   <span>Youtube</span>
                 </div>
+
                 <div>
                   <a
                     href="https://github.com/MarianoMasondo/Boorstrap-5-Practice"
                     target="_blank"
-                    ><img
-                      class="linked"
-                      src="./images/github.png"
-                      alt=""
-                      srcset=""
-                  /></a>
+                    rel="noopener noreferrer"
+                  >
+                    <img class="linked" src="./images/github.png" alt="github" />
+                  </a>
                   <span>Github</span>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="project-container">
             <div class="container-img">
               <img
@@ -608,98 +745,147 @@
                 src="./images/Meeti.jpg"
                 alt="image of sixth project"
               />
+
               <div class="linked-project">
                 <div>
                   <a
                     href="https://www.youtube.com/watch?v=ljnnEofrSI4"
                     target="_blank"
-                    ><img class="linked" src="./images/youtube.png" alt="youtube"
-                  /></a>
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="linked"
+                      src="./images/youtube.png"
+                      alt="youtube"
+                    />
+                  </a>
                   <span>Youtube</span>
-                </div>      
+                </div>
+
                 <div>
                   <a
                     href="https://github.com/MarianoMasondo/Meeti-Bootstrap-5-SASS-Practice"
                     target="_blank"
-                    ><img class="linked" src="./images/github.png" alt="github"
-                  /></a>
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="linked"
+                      src="./images/github.png"
+                      alt="github"
+                    />
+                  </a>
                   <span>Github</span>
-                </div>               
+                </div>
               </div>
             </div>
+
             <div class="project-text">
               <h4>-Proyecto 6-</h4>
+
               <h2>Meeti app</h2>
+
               <p>
-                Meeti es una aplicación creada para fortalecer habilidades Front-End, combinando Bootstrap 5 con SASS. Desde el diseño hasta la implementación, refleja mi dedicación al aprendizaje continuo. Esta práctica consolida mis conocimientos en Bootstrap y SASS, preparándome para proyectos futuros con confianza y solidez técnica.
+                Meeti es una aplicación creada para fortalecer habilidades
+                Front-End, combinando Bootstrap 5 con SASS. Desde el diseño
+                hasta la implementación, refleja mi dedicación al aprendizaje
+                continuo. Esta práctica consolida mis conocimientos en Bootstrap
+                y SASS, preparándome para proyectos futuros con confianza y
+                solidez técnica.
               </p>
+
               <div>
-                <img class="iconBW" src="./images/html.png" alt="" srcset="" />
+                <img class="iconBW" src="./images/html.png" alt="" />
                 <img class="iconBW" src="./images/css-3.png" alt="" />
-                <img class="iconBW" src="./images/js.png" alt="" srcset="" />
-                <img class="iconBW" src="./images/bootstrap_plain_logo_icon_146619.png" alt="" />
+                <img class="iconBW" src="./images/js.png" alt="" />
+                <img
+                  class="iconBW"
+                  src="./images/bootstrap_plain_logo_icon_146619.png"
+                  alt=""
+                />
                 <img class="iconBW" src="./images/sass.png" alt="" />
               </div>
             </div>
           </div>
-        <div class="project-container">
-          <div class="project-text">
-            <h4>-Proyecto 7-</h4>
-            <h2>Podcast app</h2>
-            <p>
-              En mi proyecto de aplicación para podcast, empleo Gulp para automatizar tareas, SASS para una gestión eficiente de estilos, y Bootstrap 5 para un diseño ágil y receptivo. Esta combinación me permite practicar y aplicar de manera efectiva los conocimientos adquiridos mientras mejoro la experiencia del usuario.
-            </p>
-            <div>
-              <img class="iconBW" src="./images/html.png" alt="" srcset="" />
-              <img class="iconBW" src="./images/css.png" alt="" />
-              <img class="iconBW" src="./images/js.png" alt="" srcset="" />
-              <img class="iconBW" src="./images/bootstrap_plain_logo_icon_146619.png" alt="" />
-              <img class="iconBW" src="./images/sass.png" alt="" />
-              <img class="iconBW" src="./images/gulp-logo.png" alt="" />
-            </div>
-          </div>
-          <div class="container-img">
-            <img
-              class="img-proj img-proj--left"
-              src="./images/Podcast.jpg"
-              alt="image of seventh project"
-            />
-            <div class="linked-project">
+
+          <div class="project-container">
+            <div class="project-text">
+              <h4>-Proyecto 7-</h4>
+
+              <h2>Podcast app</h2>
+
+              <p>
+                En mi proyecto de aplicación para podcast, empleo Gulp para
+                automatizar tareas, SASS para una gestión eficiente de estilos, y
+                Bootstrap 5 para un diseño ágil y receptivo. Esta combinación me
+                permite practicar y aplicar de manera efectiva los conocimientos
+                adquiridos mientras mejoro la experiencia del usuario.
+              </p>
+
               <div>
-                <a
-                  href="https://www.youtube.com/watch?v=KSdIzs-uQyI"
-                  target="_blank"
-                  ><img class="linked" src="./images/youtube.png" alt="youtube"
-                  /></i
-                ></a>
-                <span>Youtube</span>
-              </div>
-              <div>
-                <a
-                  href="https://github.com/MarianoMasondo/Podcast-Boostrap-5-SASS-Gulp-Practice"
-                  target="_blank"
-                  ><img
-                    class="linked"
-                    src="./images/github.png"
-                    alt=""
-                    srcset=""
-                /></a>
-                <span>Github</span>
+                <img class="iconBW" src="./images/html.png" alt="" />
+                <img class="iconBW" src="./images/css-3.png" alt="" />
+                <img class="iconBW" src="./images/js.png" alt="" />
+                <img
+                  class="iconBW"
+                  src="./images/bootstrap_plain_logo_icon_146619.png"
+                  alt=""
+                />
+                <img class="iconBW" src="./images/sass.png" alt="" />
+                <img class="iconBW" src="./images/gulp-logo.png" alt="" />
               </div>
             </div>
+
+            <div class="container-img">
+              <img
+                class="img-proj img-proj--left"
+                src="./images/Podcast.jpg"
+                alt="image of seventh project"
+              />
+
+              <div class="linked-project">
+                <div>
+                  <a
+                    href="https://www.youtube.com/watch?v=KSdIzs-uQyI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="linked"
+                      src="./images/youtube.png"
+                      alt="youtube"
+                    />
+                  </a>
+                  <span>Youtube</span>
+                </div>
+
+                <div>
+                  <a
+                    href="https://github.com/MarianoMasondo/Podcast-Boostrap-5-SASS-Gulp-Practice"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img class="linked" src="./images/github.png" alt="github" />
+                  </a>
+                  <span>Github</span>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
         </div>
       </section>
+
       <section id="aboutMe">
         <div class="bg-mb"></div>
+
         <h2>Acerca de mi</h2>
+
         <div class="container-aboutMe">
           <div class="aboutMe-body">
             <h3>
               Siempre hay algo nuevo por descubrir, siempre hay algo nuevo por
               aprender.
             </h3>
+
             <p>
               Mi fascinación por la tecnología surgió desde mis primeros días, y
               desde entonces, mi camino ha estado marcado por un deseo constante
@@ -710,8 +896,9 @@
               cambio.
             </p>
           </div>
+
           <div class="aboutMe-pic">
-            <img src="./images/aboutMe.jpeg">
+            <img src="./images/aboutMe.jpeg" alt="Mariano Masondo" />
           </div>
         </div>
       </section>
@@ -719,18 +906,22 @@
       <section id="contactMe">
         <div class="contactMe-body">
           <div class="body-title">Trabajemos juntos!</div>
+
           <div>
             <a href="./contactMe.html">
-              <button class="body-button" href="./contactMe.html">
+              <button class="body-button" type="button">
                 Contáctame!
                 <i class="fas fa-arrow-alt-circle-right"></i>
               </button>
             </a>
           </div>
         </div>
+
         <div class="contactMe-footer">
           <div>©2023 Mariano Masondo</div>
+
           <div>Full Stack Web Developer</div>
+
           <div>
             <nav class="footer-nav">
               <ul>
@@ -739,32 +930,39 @@
                     href="https://www.linkedin.com/in/mariano-masondo-7026b0254/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><i class="fab fa-linkedin"></i>Linkedin</a
                   >
+                    <i class="fab fa-linkedin"></i>Linkedin
+                  </a>
                 </li>
+
                 <li>
                   <a
                     href="https://github.com/MarianoMasondo"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><i class="fab fa-github"></i>Github</a
                   >
+                    <i class="fab fa-github"></i>Github
+                  </a>
                 </li>
+
                 <li>
                   <a
                     href="https://twitter.com/mason_nano"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><i class="fab fa-twitter"></i>Twitter</a
                   >
+                    <i class="fab fa-twitter"></i>Twitter
+                  </a>
                 </li>
+
                 <li>
                   <a
                     href="mailto:nanomason@gmail.com?subject=Job Offer"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><i class="fas fa-envelope"></i>Gmail</a
                   >
+                    <i class="fas fa-envelope"></i>Gmail
+                  </a>
                 </li>
               </ul>
             </nav>
@@ -772,35 +970,7 @@
         </div>
       </section>
     </main>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $('a[href^="#"]').on("click", function (event) {
-          event.preventDefault();
-          var target = this.hash;
-          var $target = $(target);
 
-          $("html, body").stop().animate(
-            {
-              scrollTop: $target.offset().top,
-            },
-            50,
-            "swing"
-          );
-        });
-
-        $('a[href="#home"]').on("click", function (event) {
-          event.preventDefault();
-          $("html, body").stop().animate(
-            {
-              scrollTop: 0,
-            },
-            50,
-            "swing"
-          );
-        });
-      });
-    </script>
-    <script src="script.js"></script>
+    <script type="module" src="./js/main.js?v=11"></script>
   </body>
 </html>

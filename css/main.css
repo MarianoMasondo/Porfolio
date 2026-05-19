@@ -775,13 +775,6 @@ header {
 
 /* =========================
    ABOUT REAL SECTION
-   HTML real:
-   #aboutMe
-   .bg-mb
-   #aboutMe > h2
-   .container-aboutMe
-   .aboutMe-body
-   .aboutMe-pic
 ========================= */
 
 #aboutMe {
@@ -895,7 +888,7 @@ header {
 }
 
 /* =========================
-   CONTACT REAL SECTION
+   CONTACT SECTION INDEX
 ========================= */
 
 #contactMe {
@@ -991,6 +984,148 @@ header {
 
 .footer-nav i {
   color: inherit;
+}
+
+/* =========================
+   CONTACTME.HTML REAL PAGE
+========================= */
+
+#contactMeHTML {
+  width: min(var(--container), calc(100% - 48px));
+  min-height: calc(100vh - 82px);
+  margin: 0 auto;
+  padding: 92px 0;
+  display: grid;
+  place-items: center;
+}
+
+#contactMeHTML .container-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.22fr);
+  grid-template-areas:
+    "image title"
+    "image email"
+    "image socials";
+  align-items: center;
+  gap: 22px 72px;
+}
+
+#contactMeHTML .container-box::before {
+  content: "Hablemos";
+  grid-area: title;
+  color: var(--slate-lighter);
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+  font-weight: 900;
+}
+
+#contactMeHTML .container-box::after {
+  content: "Estoy abierto a oportunidades, colaboraciones y proyectos donde pueda aportar desde el desarrollo web, producto o automatización.";
+  grid-area: title;
+  align-self: end;
+  max-width: 620px;
+  margin-top: 112px;
+  color: var(--slate);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+#contactMeHTML .container-box > div:first-child {
+  grid-area: image;
+  position: relative;
+  max-width: 360px;
+  justify-self: start;
+  border-radius: var(--radius);
+  background: var(--navy-light);
+}
+
+#contactMeHTML .container-box > div:first-child::before {
+  content: "";
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  border: 2px solid var(--green);
+  border-radius: var(--radius);
+  z-index: -1;
+}
+
+#avatarContact {
+  width: 100%;
+  max-height: 430px;
+  object-fit: contain;
+  object-position: bottom center;
+  border-radius: var(--radius);
+  background: var(--navy-light);
+  filter: grayscale(18%);
+  transition:
+    filter 0.25s ease,
+    transform 0.25s ease;
+}
+
+#contactMeHTML .container-box > div:first-child:hover #avatarContact {
+  filter: grayscale(0%);
+  transform: translate(-4px, -4px);
+}
+
+#contactMeHTML .container-box > div:nth-child(2) {
+  grid-area: email;
+}
+
+.contact-mail {
+  width: fit-content;
+  min-height: 52px;
+  padding: 0 22px;
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--green);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  background: transparent;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-mail:hover {
+  background: var(--green-soft);
+  transform: translateY(-2px);
+}
+
+.mail-icon {
+  color: var(--green);
+}
+
+.footer-nav--contact {
+  grid-area: socials;
+}
+
+.footer-nav--contact ul {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-nav--contact a {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(100, 255, 218, 0.35);
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  color: var(--green);
+  font-size: 1.1rem;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer-nav--contact a:hover {
+  background: var(--green-soft);
+  transform: translateY(-2px);
 }
 
 /* =========================
@@ -1158,6 +1293,24 @@ input[type="submit"] {
   .aboutMe-pic {
     max-width: 340px;
   }
+
+  #contactMeHTML .container-box {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "title"
+      "email"
+      "socials";
+    gap: 28px;
+  }
+
+  #contactMeHTML .container-box::after {
+    margin-top: 112px;
+  }
+
+  #contactMeHTML .container-box > div:first-child {
+    max-width: 340px;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1217,7 +1370,8 @@ input[type="submit"] {
   #projects,
   #aboutMe,
   #contactMe,
-  .contactMe-footer {
+  .contactMe-footer,
+  #contactMeHTML {
     width: min(100% - 28px, var(--container));
   }
 
@@ -1269,6 +1423,33 @@ input[type="submit"] {
   .footer-nav ul {
     justify-content: center;
   }
+
+  #contactMeHTML {
+    padding: 64px 0;
+  }
+
+  #contactMeHTML .container-box::before {
+    font-size: clamp(2.6rem, 14vw, 4.2rem);
+  }
+
+  #contactMeHTML .container-box::after {
+    margin-top: 88px;
+    font-size: 0.95rem;
+  }
+
+  #contactMeHTML .container-box > div:first-child {
+    max-width: 300px;
+  }
+
+  .contact-mail {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-nav--contact ul {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1277,7 +1458,8 @@ input[type="submit"] {
   #projects,
   #aboutMe,
   #contactMe,
-  .contactMe-footer {
+  .contactMe-footer,
+  #contactMeHTML {
     width: min(100% - 20px, var(--container));
   }
 
@@ -1361,5 +1543,17 @@ input[type="submit"] {
 
   .body-button {
     width: 100%;
+  }
+
+  #contactMeHTML .container-box::after {
+    margin-top: 82px;
+  }
+
+  #contactMeHTML .container-box > div:first-child {
+    max-width: 260px;
+  }
+
+  #avatarContact {
+    max-height: 330px;
   }
 }

@@ -1,0 +1,103 @@
+#aboutMe {
+  padding: 90px 0;
+}
+
+#aboutMe > .bg-mb {
+  display: none;
+}
+
+#aboutMe > h2 {
+  margin-bottom: 46px;
+}
+
+.container-aboutMe {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+  grid-template-areas: "image text";
+  align-items: center;
+  gap: 64px;
+}
+
+.aboutMe-pic {
+  grid-area: image;
+  position: relative;
+  max-width: 360px;
+  justify-self: start;
+  border-radius: var(--radius);
+  background: var(--navy-light);
+}
+
+.aboutMe-pic::before {
+  content: "";
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  border: 2px solid var(--green);
+  border-radius: var(--radius);
+  z-index: -1;
+}
+
+.aboutMe-pic::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  background: rgba(100, 255, 218, 0.12);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.aboutMe-pic:hover::after {
+  opacity: 0;
+}
+
+.aboutMe-pic img {
+  width: 100%;
+  min-height: 340px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius);
+  filter: grayscale(18%);
+  transition:
+    filter 0.25s ease,
+    transform 0.25s ease;
+}
+
+.aboutMe-pic:hover img {
+  filter: grayscale(0%);
+  transform: translate(-4px, -4px);
+}
+
+.aboutMe-body {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutMe-body h3 {
+  max-width: 760px;
+  margin-bottom: 24px;
+  color: var(--slate-lighter);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.12;
+  letter-spacing: -0.06em;
+  font-weight: 900;
+}
+
+.aboutMe-body h3::before {
+  content: "“";
+  color: var(--green);
+}
+
+.aboutMe-body h3::after {
+  content: "”";
+  color: var(--green);
+}
+
+.aboutMe-body p {
+  max-width: 720px;
+  color: var(--slate);
+  font-size: 1rem;
+  line-height: 1.85;
+}

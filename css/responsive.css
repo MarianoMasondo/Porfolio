@@ -1,0 +1,368 @@
+@media (max-width: 1000px) {
+  .container-nav {
+    grid-template-columns: auto 1fr;
+  }
+
+  .work-request,
+  .work-request-placeholder {
+    display: none;
+  }
+
+  .profile-information {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .profile-information > div:first-child {
+    order: 1;
+    max-width: 340px;
+  }
+
+  .container-header {
+    order: 2;
+  }
+
+  .project-container,
+  .project-container:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .project-container:nth-child(even) .container-img {
+    order: 1;
+  }
+
+  .project-container:nth-child(even) .project-text {
+    order: 2;
+    text-align: left;
+  }
+
+  .project-container:nth-child(even) .project-text > div:last-child {
+    justify-content: flex-start;
+  }
+
+  .softSkills-items ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container-aboutMe {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "text";
+    gap: 38px;
+  }
+
+  .aboutMe-pic {
+    max-width: 340px;
+  }
+
+  #contactMeHTML .container-box {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "title"
+      "email"
+      "socials";
+    gap: 28px;
+  }
+
+  #contactMeHTML .container-box::after {
+    margin-top: 112px;
+  }
+
+  #contactMeHTML .container-box > div:first-child {
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 760px) {
+  .container-nav {
+    width: min(100% - 28px, var(--container));
+    min-height: 70px;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .nav {
+    width: 100%;
+    min-height: 70px;
+    justify-content: space-between;
+  }
+
+  #btn-hamburger {
+    display: grid;
+    place-items: center;
+  }
+
+  .undeploy {
+    width: 100%;
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 0;
+    transition:
+      max-height 0.25s ease,
+      padding 0.25s ease,
+      opacity 0.2s ease;
+  }
+
+  .undeploy.deploy {
+    max-height: 360px;
+    padding: 10px 0 18px;
+    opacity: 1;
+  }
+
+  .undeploy li {
+    width: 100%;
+  }
+
+  .undeploy a {
+    width: 100%;
+    padding: 13px;
+    border-radius: 6px;
+    display: block;
+    text-align: center;
+    background: var(--navy-light);
+  }
+
+  .profile,
+  #education,
+  #projects,
+  #aboutMe,
+  #contactMe,
+  .contactMe-footer,
+  #contactMeHTML {
+    width: min(100% - 28px, var(--container));
+  }
+
+  .profile {
+    min-height: auto;
+    padding: 58px 0 72px;
+  }
+
+  .header-title {
+    font-size: clamp(3rem, 15vw, 4.7rem);
+  }
+
+  .header-intro {
+    font-size: 0.95rem;
+  }
+
+  .profile-information > div:first-child {
+    max-width: 300px;
+  }
+
+  .softSkills-items ul {
+    grid-template-columns: 1fr;
+  }
+
+  .container-img,
+  .img-proj {
+    min-height: 240px;
+  }
+
+  .container-img::before {
+    display: none;
+  }
+
+  .project-text p {
+    padding: 20px;
+  }
+
+  .linked-project {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    padding: 16px 12px !important;
+    border-radius: 0 0 var(--radius) var(--radius) !important;
+    gap: 20px !important;
+    transform: none !important;
+    background: var(--navy-light) !important;
+    border-top: 1px solid var(--border) !important;
+  }
+
+  .project-action-item {
+    min-width: 74px;
+  }
+
+  .linked-project a {
+    width: 52px !important;
+    height: 52px !important;
+    font-size: 1.35rem !important;
+  }
+
+  .project-action-label {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: var(--slate-lighter) !important;
+  }
+
+  .aboutMe-pic {
+    max-width: 320px;
+  }
+
+  .contactMe-footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contactMe-footer > *:nth-child(1),
+  .contactMe-footer > *:nth-child(2),
+  .contactMe-footer > *:nth-child(3) {
+    justify-self: center;
+  }
+
+  .footer-nav ul {
+    justify-content: center;
+  }
+
+  #contactMeHTML {
+    padding: 64px 0;
+  }
+
+  #contactMeHTML .container-box::before {
+    font-size: clamp(2.6rem, 14vw, 4.2rem);
+  }
+
+  #contactMeHTML .container-box::after {
+    margin-top: 88px;
+    font-size: 0.95rem;
+  }
+
+  #contactMeHTML .container-box > div:first-child {
+    max-width: 300px;
+  }
+
+  .contact-mail {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-nav--contact ul {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile,
+  #education,
+  #projects,
+  #aboutMe,
+  #contactMe,
+  .contactMe-footer,
+  #contactMeHTML {
+    width: min(100% - 20px, var(--container));
+  }
+
+  .home a {
+    font-size: 0.9rem;
+  }
+
+  .home a::before {
+    width: 36px;
+    height: 36px;
+  }
+
+  .profile {
+    padding-top: 42px;
+  }
+
+  .profile-information > div:first-child {
+    max-width: 260px;
+  }
+
+  .header-title {
+    font-size: 3.1rem;
+  }
+
+  .hero-actions {
+  width: 100%;
+}
+
+.hero-projects-button,
+.hero-cv-button {
+  width: 100%;
+}
+
+  .skillsTitle,
+  .project-header,
+  #aboutMe > h2 {
+    font-size: 1.6rem;
+  }
+
+  .skillsTitle::after,
+  .project-header::after,
+  #aboutMe > h2::after {
+    min-width: 40px;
+  }
+
+  .softSkills-items li {
+    min-height: 68px;
+  }
+
+  .countriesFlags {
+    display: grid;
+  }
+
+  .languagesIcon-container {
+    gap: 18px;
+    animation-duration: 22s;
+  }
+
+  .languagesIcon-container > div {
+    width: 82px;
+    min-height: 82px;
+  }
+
+  .container-img,
+  .img-proj {
+    min-height: 210px;
+  }
+
+  .linked-project {
+    gap: 12px !important;
+  }
+
+  .project-action-label {
+    font-size: 0.64rem !important;
+  }
+
+  .container-img {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutMe-body h3 {
+    font-size: 2rem;
+  }
+
+  .aboutMe-pic img {
+    min-height: 280px;
+  }
+
+  .body-title {
+    font-size: 2.4rem;
+  }
+
+  .body-button {
+    width: 100%;
+  }
+
+  #contactMeHTML .container-box::after {
+    margin-top: 82px;
+  }
+
+  #contactMeHTML .container-box > div:first-child {
+    max-width: 260px;
+  }
+
+  #avatarContact {
+    max-height: 330px;
+  }
+}

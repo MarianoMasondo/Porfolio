@@ -1,0 +1,315 @@
+#contactMe {
+  padding: 90px 0 0;
+}
+
+.contactMe-body {
+  min-height: 300px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.contactMe-body > div {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.body-title {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--slate-lighter);
+  font-size: clamp(2.3rem, 5vw, 4.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.06em;
+  font-weight: 900;
+}
+
+.body-button {
+  min-height: 50px;
+  margin-top: 30px;
+  padding: 0 26px;
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  color: var(--green);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.88rem;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.body-button:hover {
+  background: var(--green-soft);
+  transform: translateY(-2px);
+}
+
+.contactMe-footer {
+  min-height: 96px;
+  padding: 34px 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 18px;
+  color: var(--slate);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.76rem;
+  border-top: 1px solid var(--border);
+}
+
+.contactMe-footer > *:nth-child(1) {
+  justify-self: start;
+}
+
+.contactMe-footer > *:nth-child(2) {
+  justify-self: center;
+  text-align: center;
+}
+
+.contactMe-footer > *:nth-child(3) {
+  justify-self: end;
+}
+
+.footer-nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: var(--slate);
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--green);
+}
+
+.footer-nav i {
+  color: inherit;
+}
+
+#contactMeHTML {
+  width: min(var(--container), calc(100% - 48px));
+  min-height: calc(100vh - 82px);
+  margin: 0 auto;
+  padding: 92px 0;
+  display: grid;
+  place-items: center;
+}
+
+#contactMeHTML .container-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.22fr);
+  grid-template-areas:
+    "image title"
+    "image email"
+    "image socials";
+  align-items: center;
+  gap: 22px 72px;
+}
+
+#contactMeHTML .container-box::before {
+  content: "Hablemos";
+  grid-area: title;
+  color: var(--slate-lighter);
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+  font-weight: 900;
+}
+
+#contactMeHTML .container-box::after {
+  content: "Estoy abierto a oportunidades, colaboraciones y proyectos donde pueda aportar desde el desarrollo web, producto o automatización.";
+  grid-area: title;
+  align-self: end;
+  max-width: 620px;
+  margin-top: 112px;
+  color: var(--slate);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+#contactMeHTML .container-box > div:first-child {
+  grid-area: image;
+  position: relative;
+  max-width: 360px;
+  justify-self: start;
+  border-radius: var(--radius);
+  background: var(--navy-light);
+}
+
+#contactMeHTML .container-box > div:first-child::before {
+  content: "";
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  border: 2px solid var(--green);
+  border-radius: var(--radius);
+  z-index: -1;
+}
+
+#avatarContact {
+  width: 100%;
+  max-height: 430px;
+  object-fit: contain;
+  object-position: bottom center;
+  border-radius: var(--radius);
+  background: var(--navy-light);
+  filter: grayscale(18%);
+  transition:
+    filter 0.25s ease,
+    transform 0.25s ease;
+}
+
+#contactMeHTML .container-box > div:first-child:hover #avatarContact {
+  filter: grayscale(0%);
+  transform: translate(-4px, -4px);
+}
+
+#contactMeHTML .container-box > div:nth-child(2) {
+  grid-area: email;
+}
+
+.contact-mail {
+  width: fit-content;
+  min-height: 52px;
+  padding: 0 22px;
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--green);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  background: transparent;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-mail:hover {
+  background: var(--green-soft);
+  transform: translateY(-2px);
+}
+
+.mail-icon {
+  color: var(--green);
+}
+
+.footer-nav--contact {
+  grid-area: socials;
+}
+
+.footer-nav--contact ul {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-nav--contact a {
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgba(100, 255, 218, 0.35);
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: var(--green);
+  font-size: 1.45rem;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.footer-nav--contact a:hover {
+  background: var(--green-soft);
+  transform: translateY(-2px);
+  border-color: var(--green);
+}
+
+.contactForm {
+  width: min(680px, calc(100% - 48px));
+  min-height: calc(100vh - 82px);
+  margin: 0 auto;
+  padding: 90px 0;
+  display: grid;
+  place-items: center;
+}
+
+.contact-form,
+.contactForm form,
+.form-container {
+  width: 100%;
+}
+
+.contactForm > div,
+.contactForm form,
+.form-container,
+.contact-card {
+  width: 100%;
+  padding: 34px;
+  border-radius: var(--radius);
+  background: var(--navy-light);
+  box-shadow: var(--shadow);
+}
+
+.contactForm img,
+.contactMe-img,
+.avatar-contact {
+  max-width: 220px;
+  margin: 0 auto 24px;
+  object-fit: contain;
+}
+
+input,
+textarea {
+  width: 100%;
+  min-height: 46px;
+  margin-top: 8px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--slate-lighter);
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: var(--navy);
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--green);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+label {
+  display: block;
+  color: var(--slate-light);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+button[type="submit"],
+input[type="submit"] {
+  width: auto;
+  min-height: 48px;
+  margin-top: 18px;
+  padding: 0 22px;
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  color: var(--green);
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+}

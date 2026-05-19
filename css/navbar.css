@@ -1,0 +1,123 @@
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 25, 47, 0.86);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(100, 255, 218, 0.08);
+}
+
+.container-nav {
+  width: min(var(--container), calc(100% - 48px));
+  min-height: 82px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.home a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+.home a::before {
+  content: "M";
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--green);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--green);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.home i {
+  display: none;
+}
+
+.undeploy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+}
+
+.undeploy a {
+  color: var(--slate-lighter);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.undeploy a:hover {
+  color: var(--green);
+}
+
+.work-request {
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  color: var(--green);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: transparent;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.work-request:hover {
+  background: var(--green-soft);
+  transform: translateY(-2px);
+}
+
+.work-request-placeholder {
+  width: 154px;
+  min-height: 42px;
+  display: block;
+  justify-self: end;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+#btn-hamburger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  color: var(--green);
+  font-size: 1.6rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+#btn-hamburger.rotate {
+  transform: rotate(90deg);
+}

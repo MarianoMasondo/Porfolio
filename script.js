@@ -117,10 +117,75 @@ if (skillsMarquee && !skillsMarquee.dataset.cloned) {
 }
 
 /* =========================
+   PROJECT LINKS
+   - Reemplaza íconos rotos por FontAwesome
+   - Los deja flotando sobre la imagen
+   - Cambia textos:
+     Youtube -> Demo
+     Website -> Live App
+     Github -> Repositorio
+========================= */
+
+const projectLinkGroups = document.querySelectorAll(".linked-project");
+
+projectLinkGroups.forEach((group) => {
+  const projectButtons = group.querySelectorAll("div");
+
+  projectButtons.forEach((buttonContainer) => {
+    const link = buttonContainer.querySelector("a");
+    const previousText = buttonContainer.textContent.toLowerCase().trim();
+
+    if (!link) return;
+
+    const href = link.getAttribute("href") || "";
+    const hrefLower = href.toLowerCase();
+
+    let iconClass = "fas fa-globe";
+    let label = "Live App";
+    let ariaLabel = "Abrir aplicación publicada";
+
+    if (previousText.includes("youtube") || hrefLower.includes("youtube")) {
+      iconClass = "fab fa-youtube";
+      label = "Video demo";
+      ariaLabel = "Ver demo en YouTube";
+    } else if (previousText.includes("github") || hrefLower.includes("github")) {
+      iconClass = "fab fa-github";
+      label = "Repositorio";
+      ariaLabel = "Ver repositorio en GitHub";
+    } else if (
+      previousText.includes("website") ||
+      previousText.includes("web") ||
+      previousText.includes("live") ||
+      hrefLower.includes("vercel") ||
+      hrefLower.includes("netlify") ||
+      hrefLower.includes("github.io") ||
+      hrefLower.includes("render")
+    ) {
+      iconClass = "fab fa-chrome";
+      label = "Live App";
+      ariaLabel = "Abrir aplicación publicada";
+    }
+
+    buttonContainer.classList.add("project-action-item");
+
+    link.innerHTML = `<i class="${iconClass}"></i>`;
+    link.setAttribute("aria-label", ariaLabel);
+    link.setAttribute("title", label);
+
+    let labelElement = buttonContainer.querySelector(".project-action-label");
+
+    if (!labelElement) {
+      labelElement = document.createElement("span");
+      labelElement.className = "project-action-label";
+      buttonContainer.appendChild(labelElement);
+    }
+
+    labelElement.textContent = label;
+  });
+});
+
+/* =========================
    CSS FIXES INYECTADOS
-   - Pisa estilos viejos
-   - Estiliza botón real del hero
-   - Hace loop infinito real en programming skills
 ========================= */
 
 const style = document.createElement("style");
@@ -238,6 +303,157 @@ style.innerHTML = `
     }
   }
 
+  /* =========================
+     PROJECT ACTIONS - FLOATING READABLE STYLE
+  ========================= */
+
+  .container-img {
+    position: relative;
+  }
+
+  .container-img::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 48%;
+    z-index: 2;
+    pointer-events: none;
+    background:
+      linear-gradient(
+        to top,
+        rgba(10, 25, 47, 0.88) 0%,
+        rgba(10, 25, 47, 0.58) 42%,
+        rgba(10, 25, 47, 0.16) 76%,
+        transparent 100%
+      );
+  }
+
+  .linked-project {
+    position: absolute !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: 18px !important;
+    width: auto !important;
+    min-width: auto !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+    gap: 28px !important;
+    background: transparent !important;
+    border: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    transform: translateX(-50%) !important;
+    z-index: 6;
+  }
+
+  .project-action-item {
+    min-width: 82px;
+    display: grid !important;
+    place-items: center;
+    gap: 8px !important;
+  }
+
+  .linked-project a {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    display: grid !important;
+    place-items: center !important;
+    color: var(--green) !important;
+    font-size: 1.55rem !important;
+    background: rgba(10, 25, 47, 0.92) !important;
+    border: 1px solid rgba(100, 255, 218, 0.55) !important;
+    backdrop-filter: blur(12px);
+    box-shadow:
+      0 14px 30px rgba(2, 12, 27, 0.52),
+      0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease !important;
+  }
+
+  .linked-project a:hover {
+    background: rgba(100, 255, 218, 0.16) !important;
+    transform: translateY(-5px);
+    border-color: var(--green) !important;
+    box-shadow:
+      0 18px 36px rgba(2, 12, 27, 0.58),
+      0 0 22px rgba(100, 255, 218, 0.2);
+  }
+
+  .linked-project a img,
+  .linked-project .linked {
+    display: none !important;
+  }
+
+  .linked-project span:not(.project-action-label) {
+    display: none !important;
+  }
+
+  .project-action-label {
+    display: inline-flex !important;
+    min-height: 24px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    align-items: center;
+    justify-content: center;
+    color: var(--white) !important;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    background: rgba(10, 25, 47, 0.9);
+    border: 1px solid rgba(100, 255, 218, 0.24);
+    box-shadow: 0 8px 20px rgba(2, 12, 27, 0.42);
+    text-shadow: none;
+  }
+
+  @media (max-width: 760px) {
+    .container-img::before {
+      display: none;
+    }
+
+    .linked-project {
+      position: static !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      width: 100% !important;
+      padding: 16px 12px !important;
+      border-radius: 0 0 var(--radius) var(--radius) !important;
+      gap: 20px !important;
+      transform: none !important;
+      background: var(--navy-light) !important;
+      border-top: 1px solid var(--border) !important;
+    }
+
+    .project-action-item {
+      min-width: 74px;
+    }
+
+    .linked-project a {
+      width: 52px !important;
+      height: 52px !important;
+      font-size: 1.35rem !important;
+    }
+
+    .project-action-label {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      color: var(--slate-lighter) !important;
+    }
+  }
+
   @media (max-width: 480px) {
     .hero-projects-button {
       width: 100%;
@@ -249,6 +465,14 @@ style.innerHTML = `
 
     .languagesIcon-container {
       animation-duration: 18s !important;
+    }
+
+    .linked-project {
+      gap: 12px !important;
+    }
+
+    .project-action-label {
+      font-size: 0.64rem !important;
     }
   }
 `;

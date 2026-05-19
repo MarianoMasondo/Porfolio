@@ -47,16 +47,21 @@
   transform: translateY(-2px);
 }
 
+/* =========================
+   FOOTER INDEX
+========================= */
+
 .contactMe-footer {
-  min-height: 96px;
-  padding: 34px 0;
+  min-height: 110px;
+  padding: 38px 0;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: 18px;
-  color: var(--slate);
+  gap: 22px;
+  color: var(--slate-light);
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.76rem;
+  font-size: 0.88rem;
+  font-weight: 500;
   border-top: 1px solid var(--border);
 }
 
@@ -67,6 +72,8 @@
 .contactMe-footer > *:nth-child(2) {
   justify-self: center;
   text-align: center;
+  color: var(--slate-lighter);
+  font-weight: 700;
 }
 
 .contactMe-footer > *:nth-child(3) {
@@ -76,22 +83,36 @@
 .footer-nav ul {
   display: flex;
   justify-content: flex-end;
-  gap: 16px;
+  align-items: center;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
 .footer-nav a {
-  color: var(--slate);
-  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--slate-light);
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .footer-nav a:hover {
   color: var(--green);
+  transform: translateY(-2px);
 }
 
 .footer-nav i {
   color: inherit;
+  font-size: 1.15rem;
 }
+
+/* =========================
+   CONTACTME.HTML REAL PAGE
+========================= */
 
 #contactMeHTML {
   width: min(var(--container), calc(100% - 48px));
@@ -232,6 +253,10 @@
   transform: translateY(-2px);
   border-color: var(--green);
 }
+
+/* =========================
+   CONTACT FORM / LEGACY
+========================= */
 
 .contactForm {
   width: min(680px, calc(100% - 48px));

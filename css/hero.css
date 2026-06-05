@@ -2,7 +2,7 @@
   width: min(var(--container), calc(100% - 48px));
   min-height: calc(100vh - 82px);
   margin: 0 auto;
-  padding: 80px 0 100px;
+  padding: 10px 0 42px;
   display: grid;
   align-items: center;
 }

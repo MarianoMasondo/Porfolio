@@ -20,7 +20,10 @@ projectLinkGroups.forEach((group) => {
       iconClass = "fab fa-youtube";
       label = "Demo";
       ariaLabel = "Ver demo en YouTube";
-    } else if (previousText.includes("github") || hrefLower.includes("github")) {
+    } else if (
+      previousText.includes("github") ||
+      hrefLower.includes("github")
+    ) {
       iconClass = "fab fa-github";
       label = "Repositorio";
       ariaLabel = "Ver repositorio en GitHub";

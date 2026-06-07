@@ -1,7 +1,3 @@
-/* =========================
-   EDUCATION / SKILLS SECTION
-========================= */
-
 #education {
   padding: 12px 0 42px;
 }
@@ -10,15 +6,15 @@
   display: block;
 }
 
+.educationContainer > div:first-child {
+  display: none;
+}
+
 .wrapperSkillsLanguages {
   width: 100%;
   display: grid;
   gap: 34px;
 }
-
-/* =========================
-   SECTION TITLES
-========================= */
 
 .skillsTitle,
 .project-header,
@@ -54,10 +50,6 @@
   font-size: 0.86rem;
   font-weight: 500;
 }
-
-/* =========================
-   SOFT SKILLS
-========================= */
 
 .softSkills {
   display: grid;
@@ -116,10 +108,6 @@
   background: rgba(17, 34, 64, 0.86);
 }
 
-/* =========================
-   LANGUAGES
-========================= */
-
 .countriesFlags {
   margin-top: 18px;
   display: flex;
@@ -152,13 +140,7 @@
   font-weight: 600;
 }
 
-/* =========================
-   INFINITE SKILLS MARQUEE
-========================= */
-
 .languages {
-  --skills-gap: 26px;
-
   width: 100%;
   overflow: hidden;
   display: grid;
@@ -170,22 +152,11 @@
   min-width: max-content;
   display: flex;
   align-items: center;
-  transform: translate3d(0, 0, 0);
   will-change: transform;
 }
 
-/*
-  JavaScript genera dos grupos idénticos.
-  Al mover el track un 50%, el segundo grupo reemplaza
-  exactamente al primero sin dejar espacios vacíos.
-*/
-
-.languagesIcon-container.is-ready {
-  animation:
-    skillsInfiniteLoop
-    var(--skills-marquee-duration)
-    linear
-    infinite;
+.languagesIcon-container.marquee-ready {
+  animation: skillsMarquee var(--marquee-duration) linear infinite;
 }
 
 .languages:hover .languagesIcon-container {
@@ -195,27 +166,10 @@
 .skills-marquee-group {
   display: flex;
   align-items: center;
-  gap: var(--skills-gap);
-  padding-right: var(--skills-gap);
+  gap: 26px;
+  padding-right: 26px;
   flex-shrink: 0;
 }
-
-/* Tarjetas antes de que JavaScript inicialice el marquee */
-
-.languagesIcon-container > div:not(.skills-marquee-group) {
-  width: 92px;
-  min-height: 90px;
-  border-radius: var(--radius);
-  display: grid;
-  place-items: center;
-  align-content: center;
-  gap: 8px;
-  flex-shrink: 0;
-  background: var(--navy-light);
-  border: 1px solid var(--border);
-}
-
-/* Tarjetas después de que JavaScript genere los grupos */
 
 .skills-marquee-group > div {
   width: 92px;
@@ -254,36 +208,29 @@
   text-align: center;
 }
 
-@keyframes skillsInfiniteLoop {
+@keyframes skillsMarquee {
   from {
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
 
   to {
-    transform: translate3d(-50%, 0, 0);
+    transform: translateX(-50%);
   }
 }
-
-/* =========================
-   HIDDEN LEGACY ELEMENTS
-========================= */
 
 .curriculumContainer,
 .service-pic {
   display: none;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
 @media (max-width: 768px) {
   .softSkills-items ul {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .languages {
-    --skills-gap: 20px;
+  .skills-marquee-group {
+    gap: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -307,11 +254,11 @@
     padding: 13px 15px;
   }
 
-  .languages {
-    --skills-gap: 18px;
+  .skills-marquee-group {
+    gap: 18px;
+    padding-right: 18px;
   }
 
-  .languagesIcon-container > div:not(.skills-marquee-group),
   .skills-marquee-group > div {
     width: 82px;
     min-height: 82px;
@@ -324,11 +271,5 @@
 
   .languagesIcon-container span {
     font-size: 0.7rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .languagesIcon-container.is-ready {
-    animation: none;
   }
 }

@@ -148,15 +148,10 @@
 }
 
 .languagesIcon-container {
+  display: flex;
   width: max-content;
   min-width: max-content;
-  display: flex;
-  align-items: center;
-  will-change: transform;
-}
-
-.languagesIcon-container.marquee-ready {
-  animation: skillsMarquee var(--marquee-duration) linear infinite;
+  animation: skillsMarquee 34s linear infinite;
 }
 
 .languages:hover .languagesIcon-container {

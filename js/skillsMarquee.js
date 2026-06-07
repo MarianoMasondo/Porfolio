@@ -1,47 +1,21 @@
-(() => {
-  const SELECTOR = ".languagesIcon-container";
-  const SPEED = 42;
+const marquees = document.querySelectorAll(".languagesIcon-container");
 
-  const initMarquee = (container) => {
-    const originalHTML = container.dataset.originalHtml || container.innerHTML;
-    container.dataset.originalHtml = originalHTML;
-    container.innerHTML = originalHTML;
+marquees.forEach((marquee) => {
+  const items = Array.from(marquee.children);
 
-    const items = Array.from(container.children);
+  marquee.innerHTML = "";
 
-    if (!items.length) return;
+  const group1 = document.createElement("div");
+  const group2 = document.createElement("div");
 
-    container.innerHTML = "";
+  group1.className = "skills-marquee-group";
+  group2.className = "skills-marquee-group";
 
-    const groupOne = document.createElement("div");
-    const groupTwo = document.createElement("div");
+  items.forEach((item) => {
+    group1.appendChild(item.cloneNode(true));
+    group2.appendChild(item.cloneNode(true));
+  });
 
-    groupOne.className = "skills-marquee-group";
-    groupTwo.className = "skills-marquee-group";
-    groupTwo.setAttribute("aria-hidden", "true");
-
-    items.forEach((item) => {
-      groupOne.appendChild(item.cloneNode(true));
-      groupTwo.appendChild(item.cloneNode(true));
-    });
-
-    container.appendChild(groupOne);
-    container.appendChild(groupTwo);
-
-    const groupWidth = groupOne.scrollWidth;
-    const duration = groupWidth / SPEED;
-
-    container.style.setProperty("--marquee-duration", `${duration}s`);
-    container.classList.add("marquee-ready");
-  };
-
-  const initAll = () => {
-    document.querySelectorAll(SELECTOR).forEach(initMarquee);
-  };
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initAll);
-  } else {
-    initAll();
-  }
-})();
+  marquee.appendChild(group1);
+  marquee.appendChild(group2);
+});
